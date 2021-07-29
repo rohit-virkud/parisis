@@ -13,7 +13,7 @@
 		margin:0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: 'Anton', sans-serif;
+		
         font-family: 'Roboto', sans-serif;
 	}
 	a, a:hover, a:focus, a:active {
@@ -130,7 +130,7 @@ color: inherit;
 		background: linear-gradient(219.43deg, #EAC391 0.27%, #BE9160 83.24%);
         border-radius: min(10vw,5vh);
         font-size:  min(3vw,1.5vh);
-        margin-top: min(8vw,4vh);
+        
         letter-spacing: 0.1em;
 
 	}
@@ -182,11 +182,72 @@ color: inherit;
     }	
     .next-btn
     {
+    	
+    	width: min(10vw,5vh);
+    	height: min(10vw,5vh);
+    }
+
+    /*Screen 02*/
+    .slide-02
+    {
+    	background:#154F83;
+    }
+    .slide-02-img
+    {
+       width: 100%;
+       height: 50vh;
+
+    
+    }
+    .image-spread
+    {
+       width: 100%;
+       height: 50vh;
+       position: absolute;
+       top:0;
+       left: 0;
+       background: linear-gradient(359.69deg, #154F83 8.2%, rgba(21, 78, 130, 0) 53.12%);
+    }
+    .slide-02-profile
+    {
+    	width: min(60vw,20vh);
+        height: min(42vw,25vh);
+    	mix-blend-mode: normal;
+        filter: drop-shadow(0px 3.51208px 17.5604px rgba(0, 0, 0, 0.25));
+        margin-left: min(15vw,8vh);
+        margin-top: min(20vw,10vh);
+    }
+
+    .second-screen-h1
+    {
+    	font-family: 'Anton', sans-serif;
+    	font-size: min(9vw,4.5vh);
+    	bottom: min(60vw,30vh);
+        z-index: 88;
     	position: absolute;
-    	bottom: min(24vw,13vh);
-    	right: min(10vw,5vh);
-    	width: 9vw;
-    	height: 9vw;
+    	right: min(8vw,4vh);
+    	font-size: 400;
+    	color: #E4BC8B;
+    	text-transform: uppercase;
+    	letter-spacing: 0.005em;
+
+    }
+    .adr-tag
+    {
+    	font-family: 'poppins', sans-serif;
+    	font-size: min(4vw,2vh);
+    	bottom: min(55vw,25vh);
+        z-index: 88;
+    	position: absolute;
+    	right: min(8vw,4vh);
+    	font-weight: 400;
+    	line-height: 100.5%;
+    	width: 40%;
+    	text-align: right;
+    	color: #A7BCC7;
+    	
+    	
+    	
     }
 
 
@@ -206,7 +267,7 @@ color: inherit;
 
 			<img src="sharebtn.png" alt="sharebtn-img" class="share-btn" />
 
-			<img src="next.png" alt="next-img" class="next-btn next" />
+			
 
 			<h1 class="translator">GRE</h1>
 
@@ -241,12 +302,27 @@ color: inherit;
 			 	</a>
 			</div>
 
+            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: center;margin-top: min(8vw,4vh);"> 
 			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
+			 	<img src="next.png" alt="next-img" class="next-btn next" style="margin-left: min(4vw,3vh)" />
+			</div> 	
 			
           </div>
 
 		</div>
-		<div class="swiper-slide slide-02"></div>
+		<div class="swiper-slide slide-02">
+			<div class="slide-02-img">
+				<img src="image02.png" alt="img" />
+			</div>
+			<h1 class="second-screen-h1">Georgios Parisis</h1>
+			<p class="adr-tag">Lieutenant General e.a.Economist</p>
+
+
+			<div class="slide-02-profile">
+				<img src="profile.png" alt="profile" />
+			</div>
+			<div class="image-spread"></div>
+		</div>
 		<div class="swiper-slide slide-03"></div>
 	</div>
 	<!-- Add Arrows -->
