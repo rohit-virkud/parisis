@@ -208,48 +208,68 @@ color: inherit;
        left: 0;
        background: linear-gradient(359.69deg, #154F83 8.2%, rgba(21, 78, 130, 0) 53.12%);
     }
+    .stack
+    {
+
+    display: flex;
+   justify-content: center; 
+    align-items: center;
+    width: 100%;
+    margin-top: min(15vw,7.5vh);
+
+    }
+    .stack-wrapper
+    {
+    	display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 80%;
+
+    }
     .slide-02-profile
     {
-    	width: min(60vw,20vh);
-        height: min(42vw,25vh);
+    	width: min(38vw,19vh);
+        height: min(45vw,23vh);
     	mix-blend-mode: normal;
         filter: drop-shadow(0px 3.51208px 17.5604px rgba(0, 0, 0, 0.25));
-        margin-left: min(15vw,8vh);
-        margin-top: min(20vw,10vh);
+        
     }
 
     .second-screen-h1
     {
     	font-family: 'Anton', sans-serif;
-    	font-size: min(9vw,4.5vh);
-    	bottom: min(60vw,30vh);
+    	font-size: min(8.5vw,4.2vh);
+    	
         z-index: 88;
-    	position: absolute;
-    	right: min(8vw,4vh);
+    	width: 90%;
     	font-size: 400;
     	color: #E4BC8B;
     	text-transform: uppercase;
     	letter-spacing: 0.005em;
+    	text-align: right
 
     }
     .adr-tag
     {
     	font-family: 'poppins', sans-serif;
     	font-size: min(4vw,2vh);
-    	bottom: min(55vw,25vh);
+    	
         z-index: 88;
-    	position: absolute;
-    	right: min(8vw,4vh);
+    	margin-left: 10%;
+    	
     	font-weight: 400;
     	line-height: 100.5%;
-    	width: 40%;
+    	width: 80%;
     	text-align: right;
     	color: #A7BCC7;
+
+    	
     	
     	
     	
     }
 
+   
 
 
 </style>
@@ -311,17 +331,30 @@ color: inherit;
 
 		</div>
 		<div class="swiper-slide slide-02">
+			
+            
+			
 			<div class="slide-02-img">
 				<img src="image02.png" alt="img" />
 			</div>
-			<h1 class="second-screen-h1">Georgios Parisis</h1>
-			<p class="adr-tag">Lieutenant General e.a.Economist</p>
-
-
-			<div class="slide-02-profile">
-				<img src="profile.png" alt="profile" />
-			</div>
 			<div class="image-spread"></div>
+
+
+			<div class="stack">
+				<div class="stack-wrapper">
+					<div class="slide-02-profile">
+					<img src="profile.png" alt="profile" />
+				    </div>
+
+				    <div style="z-index: 2;position:absolute;margin-left:  min(28vw,13vh);">
+					<h1 class="second-screen-h1">Georgios Parisis</h1>
+					<p class="adr-tag">Lieutenant General e.a.Economist</p>
+				    </div>
+			    </div>
+
+		    </div>
+
+
 		</div>
 		<div class="swiper-slide slide-03"></div>
 	</div>
