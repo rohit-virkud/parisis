@@ -16,6 +16,9 @@
 		
         font-family: 'Roboto', sans-serif;
 	}
+	 * {
+      touch-action: manipulation;
+  }
 	a, a:hover, a:focus, a:active {
 text-decoration: none;
 color: inherit;
@@ -174,7 +177,7 @@ color: inherit;
 	.translator
     {
     	position: absolute;
-		top: min(20vw,10vh);
+		top: min(20vw,11vh);
 		right: min(6.5vw,3.5vh);
 		text-align: center;
 		font-size: min(3vw,1.8vh);
@@ -196,8 +199,12 @@ color: inherit;
     {
        width: 100%;
        height: 50vh;
-
-    
+       overflow: hidden;
+    }
+    .slide-02-img-img
+    {
+    	transform: scale(1.3);
+    	transition: 5s all ease-out;
     }
     .image-spread
     {
@@ -410,6 +417,16 @@ color: inherit;
         height: min(60vw,40vh);
         overflow: hidden;
     }
+    .imgs
+    {
+    	transform: scale(1.2);
+    	transition: 5s all ease-out;
+
+    }
+    .zoomOut
+    {
+    	transform: scale(1);
+    }
     .para
     {
     	margin-top: min(10vw,5vh);
@@ -429,7 +446,7 @@ color: inherit;
     .bookwrapper
     {
     	position: absolute;
-    	top: min(160vw,80vh);
+    	top: min(140vw,80vh);
     	display: flex;
     	flex-shrink: 0;
     	justify-content: center;
@@ -453,11 +470,154 @@ color: inherit;
 
    
 
+   /*share slide*/
+         .share-slide
+        {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            mix-blend-mode: normal;
+            backdrop-filter: blur(30px);
+            z-index: 222;
+            transform: translateX(-100%); 
+            transition:  transform 1s ease-out;
+        }
+        
+        .share-slide .close-icon
+        {
+            position: absolute;
+            top:4%;
+            right: 7%;
+            width: min(5vw,3vh);
+            height: min(5vw,3vh); 
+           
+            
+        }
+        .share-slide-share-icons
+        {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            position: fixed;
+            top: 50%;
+            left: 50%; 
+            /* bring your own prefixes */
+            transform: translate(-50%, -55%);
+           
+        }
+        .share-headline 
+        {
+            font-size: min(5vw,2.5vh);
+            color: #1D3138;
+            margin-bottom:  min(4vw,3vh);
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
+
+            
+        }
+        .scan-and-save-txt
+        {
+            font-size: min(5vw,2.5vh);
+            color: #1D3138;
+            margin-bottom:  min(4vw,4vh);
+            margin-top: 30%;
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
+        }
+
+
+        
+        .icon-grid
+        {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 11vw 11vw 11vw 11vw;
+            grid-gap: min(2vw,1vh);
+            
+            justify-content: center;
+            transform: translateX(-40%);
+            transition:  transform 1s ease-out;
+            
+        }
+        .icon-grid a
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .icon-grid img
+        {
+            width: min(11vw,5vh);
+            height: min(11vw,5vh);
+        }
+        
+        .qr-code-wrapper
+        {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            color: #1D4B7A;
+            align-items: center;
+        }
+        .qr-code-container
+        {
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
+        }
+        .qr-code-container img
+        { 
+            width: min(30vw,20vh);
+            height: min(30vw,20vh);
+           
+           
+        }
+
+        .open{
+            transform: translateX(0%);
+        }
+        .closeAnim
+        {
+            transition:  transform 0.5s ease-out;
+            transform: rotateZ(180deg);
+           
+        }
+
 
 </style>
 
 </head>
 <body>
+
+
+	<div class="share-slide" id="share-slide">
+        <img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()"  />
+        <div class="share-slide-share-icons">
+            <h2 class="share-headline">SHARE MY CARD</h2>
+            <div class="icon-grid">
+                <a href="#!" ><img src="sms.png" alt="sms-img" /></a>
+                <a href="#!"><img src="cs.png" alt="cs-img"/></a>
+                <a href="#!"><img src="whatsapp.png" alt="whatsapp-img" /></a>
+                <a href="#!"><img src="dropbox 187.png" alt="dropbox-img" /></a>
+                <a href="#!"><img src="fb9.png" alt="fb-img" /></a>
+                <a href="#!"><img src="telegram 191.png" alt="tel-img"  /></a>
+                <a href="#!"><img src="twitter8.png" alt="twit-img"  /></a>
+                <a href="#!"><img src="linkedin3.png" alt="linkedin-img"  /></a>
+            </div>
+            <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+            <div class="qr-code-container" >
+                <img src="qr.png" alt="qr-img"/>
+            </div>
+        </div>
+    </div>
+
+
 
 <!-- Swiper -->
 <div class="row swiper-container">
@@ -469,22 +629,22 @@ color: inherit;
 			<img src="Polygon001.png" alt="polygon-img" class="left-polygon" />
 			<img src="Polygon002.png" alt="polygon-img" class="right-polygon" />
 
-			<img src="sharebtn.png" alt="sharebtn-img" class="share-btn" />
+			<a href="#!" onclick="openSlide()"><img src="sharebtn.png" alt="sharebtn-img" class="share-btn" /></a>
 
 			
 
-			<h1 class="translator">GRE</h1>
+			<a href="#!" onclick="translator()" class="translator" id="key">GRE</a>
 
 		 	<div class="slide-01-wrapper">
 			 <div class="logo">
 			 	<img src="logo.png"  alt="logo" class="logo-img" />
 			 </div>
-			 <h1 class="headline">Georgios Parisis</h1>
+			 <h1 class="headline" id="name">Georgios Parisis</h1>
 			 <p class="tag">ANASTAZIA LUXURY SUITES & SPA</p>
 
 			 <div class="social">
-			 	<a href="#"><img src="fb.png" alt="fb"/></a>
-			 	<a href="#"><img src="insta.png" alt="insta"/></a>
+			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
+			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
 			 </div>
 
 			 <div class="links-container" >
@@ -508,7 +668,7 @@ color: inherit;
 
             <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: center;margin-top: min(8vw,4vh);"> 
 			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
-			 	<img src="next.png" alt="next-img" class="next-btn next" style="margin-left: min(4vw,3vh)" />
+			 	<a href="#!" class="next"><img src="next.png" alt="next-img" class=" next-btn " style="margin-left: min(4vw,3vh)" /></a>
 			</div> 	
 			
           </div>
@@ -516,7 +676,7 @@ color: inherit;
 
         <div class="slide-02">
           <div class="slide-02-img">
-				<img src="image02.png" alt="img" />
+				<img src="image02.png" alt="img" class="slide-02-img-img" />
 			</div>
 			<div class="image-spread"></div>
 
@@ -540,15 +700,15 @@ color: inherit;
 					<img src="profile.png" alt="profile" />
 				    </div>
 				    <div class="social">
-				    	 <a href="#!"><img src="insta.png" alt="insta"/></a>
-				    	<a href="#!"><img src="fb.png" alt="fb"/></a>
+				    	 <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
+				    	<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
 			 	       
 				    </div>
 				   </div>  
 
 				    <div style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
-					<h1 class="second-screen-h1">Georgios Parisis</h1>
-					<p class="adr-tag">Lieutenant General e.a.Economist</p>
+					<h1 class="second-screen-h1" id="name">Georgios Parisis</h1>
+					<p class="adr-tag" id="tag">Lieutenant General e.a.Economist</p>
 					<p class="slide02-phone-txt">+30 6945376731</p>
 					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
 				    </div>
@@ -594,14 +754,14 @@ color: inherit;
            </div>
 
 
-           <p class="para">Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
+           <p class="para" id="para">Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
 
 For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.</p>
  
         <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;margin-top: min(6vw,3vh)">
             <div class="social">
-			 	<a href="#"><img src="fb.png" alt="fb"/></a>
-			 	<a href="#"><img src="insta.png" alt="insta"/></a>
+			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
+			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
 			 </div>
 		</div>	 
 
@@ -623,6 +783,8 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 <script type="text/javascript">
 	var swiper = new Swiper('.swiper-container', {
 		  effect: 'coverflow',
+		  observer: true,
+          observeParents: true,
 		  grabCursor: true,
 		  centeredSlides: true,
 		  slidesPerView: 'auto',
@@ -640,6 +802,69 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   			prevEl: '.prev',
   		}
   	});
+
+
+  	  setInterval(function () {
+
+  	  	if (swiper.activeIndex === 0) {
+        $(".slide-02-img-img").addClass("zoomOut");
+      } else {
+        $(".slide-02-img-img").removeClass("zoomOut");
+      }
+
+
+      if (swiper.activeIndex === 1) {
+        $(".imgs").addClass("zoomOut");
+      } else {
+        $(".imgs").removeClass("zoomOut");
+      }
+
+    }, 1000);
+
+  	   function openSlide() {
+    $(".share-slide").addClass("open")
+    $(".icon-grid").addClass("open").delay(500);
+    $(".share-headline").addClass("open").delay(500);
+    $(".scan-and-save-txt").addClass("open").delay(500);
+    $(".qr-code-container").addClass("open").delay(500);
+    $(".close-icon").removeClass("closeAnim");
+    }
+
+    function closeSlide() {
+    $(".share-slide").removeClass("open")
+    $(".icon-grid").removeClass("open").delay(500);
+    $(".share-headline").removeClass("open").delay(500);
+    $(".scan-and-save-txt").removeClass("open").delay(500);
+    $(".qr-code-container").removeClass("open").delay(500);
+    $(".close-icon").addClass("closeAnim").delay(1000);
+    }
+
+
+
+  	  function translator()
+  	  {
+
+  	  	var x=document.getElementById("key").innerText;
+
+  	  	if(x === "GRE")
+  	  	{
+  	  	document.getElementById("key").innerHTML = "ENG";
+  	  	document.getElementById("name").innerHTML = "Παρισης Γεωργιος";
+  	  	document.getElementById("tag").innerHTML = "ΥποπτΕραρχος ε.α.ΟικονομολΟγος";
+  	  	document.getElementById("para").innerHTML = "Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.                                       Προσφέρει σε κάθε πελάτη υπηρεσίες υψηλού επιπέδου σε πολύ προσιτές τιμές.";
+
+  	   }else
+  	   {
+        document.getElementById("key").innerHTML = "GRE";
+  	   	document.getElementById("name").innerHTML = "Georgios Parisis";
+  	  	document.getElementById("tag").innerHTML = "Lieutenant General e.a.Economist";
+  	  	document.getElementById("para").innerHTML = "Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali).                                                                                                                                                   For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.";
+
+  	   }
+  	  }
+
+
+
 </script>
 
 </body>
