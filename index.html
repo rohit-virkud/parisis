@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Parisis Card</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css'>
 <style type="text/css">
     *
@@ -204,7 +204,7 @@ color: inherit;
        width: 100%;
        height: 50vh;
        position: absolute;
-       top:0;
+       top:102%;
        left: 0;
        background: linear-gradient(359.69deg, #154F83 8.2%, rgba(21, 78, 130, 0) 53.12%);
     }
@@ -222,14 +222,14 @@ color: inherit;
     {
     	display: flex;
     /* justify-content: center; */
-    align-items: center;
+    
     width: 80%;
 
     }
     .slide-02-profile
     {
-    	width: min(38vw,19vh);
-        height: min(45vw,23vh);
+    	width: min(40vw,20vh);
+        height: min(48vw,24vh);
     	mix-blend-mode: normal;
         filter: drop-shadow(0px 3.51208px 17.5604px rgba(0, 0, 0, 0.25));
         
@@ -238,24 +238,26 @@ color: inherit;
     .second-screen-h1
     {
     	font-family: 'Anton', sans-serif;
-    	font-size: min(8.5vw,4.2vh);
+    	font-size: min(8vw,4vh);
     	
         z-index: 88;
-    	width: 90%;
-    	font-size: 400;
+    	width: 100%;
+    	font-weight: 400;
     	color: #E4BC8B;
+    	text-align: right;
     	text-transform: uppercase;
     	letter-spacing: 0.005em;
-    	text-align: right
+    	text-align: right;
+    	margin-top: min(5vw,2.5vh);
 
     }
     .adr-tag
     {
     	font-family: 'poppins', sans-serif;
-    	font-size: min(4vw,2vh);
+    	font-size: min(3vw,2vh);
     	
         z-index: 88;
-    	margin-left: 10%;
+    	margin-left: 20%;
     	
     	font-weight: 400;
     	line-height: 100.5%;
@@ -268,6 +270,186 @@ color: inherit;
     	
     	
     }
+    .swiper-slide
+    {
+    	overflow: scroll;
+
+    }
+    .slide-02
+    {
+    	width: 100%;
+    	height: 100%;
+    	background: #154F83;
+    }
+    .slide02-phone-txt
+    {
+    	font-family: 'poppins', sans-serif;
+    	font-size: min(3.8vw,1.8vh);
+    	
+        z-index: 88;
+    
+    	
+    	font-weight: 400;
+    	line-height: 100.5%;
+    	width: 100%;
+    	text-align: right;
+    	color: #FFFFFF;
+    	margin-top: min(4vw,2vh);
+
+    }
+    .slide02-adr-txt
+    {
+    	font-family: 'poppins', sans-serif;
+    	font-size: min(4vw,2vh);
+    	
+        z-index: 88;
+    	
+    	font-family: 'Bellefair', serif;
+    	font-weight: 400;
+    	line-height: 100.5%;
+    	width: 100%;
+    	text-align: right;
+    	color: #FFFFFF;
+    	margin-top: min(4vw,2vh);
+
+    }
+    .reviews
+    {
+    	position: absolute;
+    	top: 103%;
+    	left: 6%;
+    	display: flex;
+    	flex-shrink: 0;
+    	align-items: center;
+    }
+    .reviews .logo
+    {
+    	width: min(14vw,7vh);
+        height: min(14vw,7vh);
+
+    }
+    .review-icon
+    {
+    	width: min(9vw,4.5vh);
+    	height: min(9vw,4.5vh);
+    	margin-left: min(4vw,1.8vh);
+    }
+    .review-btn-wrap
+    {
+    	position: absolute;
+    	top: 142%;
+    	width: 100%;
+    	display: flex;
+    	flex-shrink: 0;
+    	justify-content: center;
+    }
+    .review-btn
+    {
+    	padding: min(4vw,1.8vh);
+    	border: 1px solid #ffff;
+    	border-radius: min(6vw,3vh); 
+    	
+    	font-size: min(3vw,1.5vh);
+    	font-weight: 700;
+    	letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    /*slide 03*/
+    .slide-03
+    {
+    	display: flex;
+    	flex-shrink: 0;
+    	flex-direction: column;
+    	margin-top: auto;
+    	margin-bottom: auto;
+    	overflow: scroll;
+    	align-items: center;
+
+
+    }
+    .slide-03-container
+    {
+    	width: 85%;
+    	padding-top: min(5vw,2.5vh);
+    	padding-bottom:  min(5vw,2.5vh);
+    }
+    .logo2
+    {
+    	width: min(40vw,20vh);
+    	height: min(12vw,6vh);
+    	background-size: contain;
+    }
+    .slide-03-headline
+    {
+    	width: 100%;
+    	font-family: 'Anton', sans-serif;
+    	margin-top: min(8vw,4vh);
+    	color: #DDB583;
+    	font-size: min(6vw,3vh);
+    	font-weight: 400;
+    	line-height: 119.69%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+    .gallery
+    {
+    	display: flex;
+    }
+    .galler-group-01,.galler-group-02
+    {
+    	display: flex;
+    	flex-shrink: 0;
+    	flex-direction: column;
+        width: 50%;
+    }
+    .img1,.img2,.img3,.img4
+    {
+    	width: 92%;
+        height: min(60vw,40vh);
+        overflow: hidden;
+    }
+    .para
+    {
+    	margin-top: min(10vw,5vh);
+    	width: 85%;
+    	
+    	font-style: normal;
+        font-weight: normal;
+    	line-height: 120%;
+    	font-size: min(3vw,1.5vh);
+    	white-space: pre-line;
+    }
+
+    .slide-01,.slide-03
+    {
+    	border-radius: min(4vw,2vh);
+    }
+    .bookwrapper
+    {
+    	position: absolute;
+    	top: 80%;
+    	display: flex;
+    	flex-shrink: 0;
+    	justify-content: center;
+    	width: 80%;
+
+    }
+    .bookspotbtn
+    {
+    	padding-top: min(3vw,1.5vh);
+    	padding-bottom:  min(3vw,1.5vh);
+    	padding-left:  min(4vw,2vh);
+    	padding-right:  min(4vw,2vh);
+    	background: black;
+    	text-transform: uppercase;
+    	border-radius: min(10vw,5vh);
+    	letter-spacing: 0.1em;
+    	font-weight: 900;
+    	font-size: min(2.2vw,1.1vh);
+    }
+   
 
    
 
@@ -280,7 +462,9 @@ color: inherit;
 <!-- Swiper -->
 <div class="row swiper-container">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide slide-01">
+		<div class="swiper-slide">
+
+			<div class="slide-01">
 
 			<img src="Polygon001.png" alt="polygon-img" class="left-polygon" />
 			<img src="Polygon002.png" alt="polygon-img" class="right-polygon" />
@@ -299,8 +483,8 @@ color: inherit;
 			 <p class="tag">ANASTAZIA LUXURY SUITES & SPA</p>
 
 			 <div class="social">
-			 	<img src="fb.png" alt="fb"/>
-			 	<img src="insta.png" alt="insta"/>
+			 	<a href="#"><img src="fb.png" alt="fb"/></a>
+			 	<a href="#"><img src="insta.png" alt="insta"/></a>
 			 </div>
 
 			 <div class="links-container" >
@@ -328,35 +512,106 @@ color: inherit;
 			</div> 	
 			
           </div>
+      </div>
 
-		</div>
-		<div class="swiper-slide slide-02">
-			
-            
-			
-			<div class="slide-02-img">
+        <div class="slide-02">
+          <div class="slide-02-img">
 				<img src="image02.png" alt="img" />
 			</div>
 			<div class="image-spread"></div>
 
+			<div class="reviews">
+				<a href="#!"><img src="logo.png" alt="insta" class="logo" /></a>
+				<a href="#!"><img src="Tripadvisor.png" alt="Tripadvisor" class="review-icon" /></a>
+				<a href="#!"><img src="booking.png" alt="bookings"  class="review-icon"/></a>
+			 	       
+			</div>
+		
+			
+			<div class="review-btn-wrap">
+			<a href="#" class="review-btn">view more</a>
+            </div> 
 
 			<div class="stack">
 				<div class="stack-wrapper">
+					
+                  <div class="imgandsocial">
 					<div class="slide-02-profile">
 					<img src="profile.png" alt="profile" />
 				    </div>
+				    <div class="social">
+				    	 <a href="#!"><img src="insta.png" alt="insta"/></a>
+				    	<a href="#!"><img src="fb.png" alt="fb"/></a>
+			 	       
+				    </div>
+				   </div>  
 
-				    <div style="z-index: 2;position:absolute;margin-left:  min(28vw,13vh);">
+				    <div style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
 					<h1 class="second-screen-h1">Georgios Parisis</h1>
 					<p class="adr-tag">Lieutenant General e.a.Economist</p>
+					<p class="slide02-phone-txt">+30 6945376731</p>
+					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
 				    </div>
 			    </div>
-
 		    </div>
+		</div>
+    </div> <!-- content end, slide 01 - 02 -->
 
+
+
+       <div class="swiper-slide slide-03">
+           <!-- content here slide 03 -->
+           <div class="slide-03-container">
+           	<div class="logo2">
+           		<img src="logo2.png" alt="logo2" />
+           	</div>
+           	<h1 class="slide-03-headline">The Crossing Between Business & Pleasure is Just a Breath Away</h1>
+
+           	<div class="gallery">
+           	<div class="galler-group-01"  style="margin-top: 18%">
+           		<div class="img1">
+           			<img src="slide02-img01.png" alt="gallery" class="imgs" />
+           		</div>
+           		<div class="img3" style="margin-top:8% ">
+           			<img src="slide02-img03.png" alt="gallery" class="imgs"/>
+           		</div>
+           		
+           	</div>	
+
+
+           	<div class="galler-group-02" style="margin-top: 8%">
+           		<div class="img2">
+           			<img src="slide02-img02.png" alt="gallery"  class="imgs"/>
+           		</div>
+           		<div class="img4" style="margin-top:8%;">
+           			<img src="slide02-img04.png" alt="gallery" class="imgs"/>
+           		</div>
+           	</div>
+           </div>
+
+           <div class="bookwrapper">
+           <a href="#!" class="bookspotbtn">BOOK YOUR SPOT</a>
+           </div>
+
+
+           <p class="para">Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
+
+For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.</p>
+ 
+        <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;margin-top: min(6vw,3vh)">
+            <div class="social">
+			 	<a href="#"><img src="fb.png" alt="fb"/></a>
+			 	<a href="#"><img src="insta.png" alt="insta"/></a>
+			 </div>
+		</div>	 
+
+        </div>
+     <img src="vector.png" alt="vector" class="vector" style="height: auto;" />
+		</div>
 
 		</div>
-		<div class="swiper-slide slide-03"></div>
+		
+		
 	</div>
 	<!-- Add Arrows -->
 	<div class="next"></div>
@@ -374,8 +629,8 @@ color: inherit;
 		  speed: 900,
 		  coverflow: {
 		    rotate: -100,
-		    stretch: -150,
-		    depth: 3000,
+		    stretch: 200,
+		    depth: 1500,
 		    modifier: 1,
 		    slideShadows : true
 		  },
