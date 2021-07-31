@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css'>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
 <style type="text/css">
     *
 	{
@@ -133,8 +134,9 @@ color: inherit;
 		background: linear-gradient(219.43deg, #EAC391 0.27%, #BE9160 83.24%);
         border-radius: min(10vw,5vh);
         font-size:  min(3vw,1.5vh);
-        margin-left:min(12vw,6vh);
+      
         letter-spacing: 0.1em;
+
 
 	}
 	.social
@@ -257,6 +259,16 @@ color: inherit;
     	text-align: right;
     	margin-top: min(5vw,2.5vh);
 
+    }
+    .gre{
+    	font-family: 'Roboto', sans-serif;
+    	font-weight: 900;
+    	font-size:  min(8vw,3.5vh);
+    	margin-top: min(8vw,4vh);
+    }
+    .none
+    {
+    	display: none;
     }
     .adr-tag
     {
@@ -434,7 +446,7 @@ color: inherit;
     	
     	font-style: normal;
         font-weight: normal;
-    	line-height: 120%;
+    	line-height: 150%;
     	font-size: min(3vw,1.5vh);
     	white-space: pre-line;
     }
@@ -477,9 +489,10 @@ color: inherit;
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            background-color: #FFFFFF;
-            mix-blend-mode: normal;
-            backdrop-filter: blur(30px);
+            background: linear-gradient(180deg, #DCB06B 0%, #BE9160 100%);
+
+           /* mix-blend-mode: normal;
+            backdrop-filter: blur(30px);*/
             z-index: 222;
             transform: translateX(-100%); 
             transition:  transform 1s ease-out;
@@ -512,7 +525,7 @@ color: inherit;
         .share-headline 
         {
             font-size: min(5vw,2.5vh);
-            color: #1D3138;
+            color: #ffffff;
             margin-bottom:  min(4vw,3vh);
             transform: translateX(-80%);
             transition:  transform 1s ease-out;
@@ -522,7 +535,7 @@ color: inherit;
         .scan-and-save-txt
         {
             font-size: min(5vw,2.5vh);
-            color: #1D3138;
+            color: #ffffff;
             margin-bottom:  min(4vw,4vh);
             margin-top: 30%;
             transform: translateX(-80%);
@@ -563,7 +576,7 @@ color: inherit;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            color: #1D4B7A;
+            color: #ffffff;
             align-items: center;
         }
         .qr-code-container
@@ -588,7 +601,48 @@ color: inherit;
             transform: rotateZ(180deg);
            
         }
+        .down-arrow
+        {
+        	
+		    width: min(10vw,5vh);
+		    height: min(10vw,5vh);
+		    
+		    position: absolute;
+            right: 6%;
+           
 
+        }
+        .bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+        .lottie-anim
+        {
+            position: absolute;
+            bottom: 1.5%;
+            
+            width: min(8vw,6vh);
+            height: min(8vw,6vh);
+        }
+        lottie-player
+        {
+            width:min(72.993vw,36vh);
+            height: min(72.993vw,36vh);
+        }
 
 </style>
 
@@ -596,7 +650,7 @@ color: inherit;
 <body>
 
 
-	<div class="share-slide" id="share-slide">
+	<div class="share-slide" id="share-slide" style="border: none;">
         <img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()"  />
         <div class="share-slide-share-icons">
             <h2 class="share-headline">SHARE MY CARD</h2>
@@ -621,11 +675,18 @@ color: inherit;
 
 <!-- Swiper -->
 <div class="row swiper-container">
+
+
+
+
+
 	<div class="swiper-wrapper">
-		<div class="swiper-slide" style="border-radius: min(4vw,2vh);">
+		<div class="swiper-slide swiper-slide-prev" style="border-radius: min(4vw,2vh);" >
          
 			<div class="slide-01">
-
+               <audio id="audio">
+            <source src="intro.mpeg" type="audio/mpeg" />
+          </audio>
 			<img src="Polygon001.png" alt="polygon-img" class="left-polygon" />
 			<img src="Polygon002.png" alt="polygon-img" class="right-polygon" />
 
@@ -643,8 +704,8 @@ color: inherit;
 			 <p class="tag">ANASTAZIA LUXURY SUITES & SPA</p>
 
 			 <div class="social">
-			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
-			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
+			 	<a href="https://www.facebook.com/anastaziahotel/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
+			 	<a href="https://www.instagram.com/anastazia_luxury_suites_spa/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
 			 </div>
 
 			 <div class="links-container" >
@@ -668,8 +729,16 @@ color: inherit;
 
             <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: center;margin-top: min(8vw,4vh);"> 
 			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
-			 	<a href="#!" class="next"><img src="next.png" alt="next-img" class=" next-btn " style="margin-left: min(4vw,3vh)" /></a>
+			 	 <img src="next.png"  alt="next" class="down-arrow bounce" />
 			</div> 	
+
+
+			 <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
+                background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
+                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:6%;
+                  "  data-swiper-parallax="-250"></lottie-player>
+
+			
 			
           </div>
       </div>
@@ -700,14 +769,15 @@ color: inherit;
 					<img src="profile.png" alt="profile" />
 				    </div>
 				    <div class="social">
-				    	 <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
-				    	<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
+				    	 <a href="https://www.instagram.com/georgiosparisis/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
+				    	<a href="https://www.facebook.com/G.EM.PARISIS" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
 			 	       
 				    </div>
 				   </div>  
 
 				    <div style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
-					<h1 class="second-screen-h1" id="name">Georgios Parisis</h1>
+					<h1 class="second-screen-h1 eng">Georgios Parisis</h1>
+					<h1 class="second-screen-h1 gre none">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
 					<p class="adr-tag" id="tag">Lieutenant General e.a.Economist</p>
 					<p class="slide02-phone-txt">+30 6945376731</p>
 					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
@@ -733,7 +803,8 @@ color: inherit;
            			<img src="slide02-img01.png" alt="gallery" class="imgs" />
            		</div>
            		<div class="img3" style="margin-top:8% ">
-           			<img src="slide02-img03.png" alt="gallery" class="imgs"/>
+           			<img src="slide02-img04.png" alt="gallery" class="imgs"/>
+           			
            		</div>
            		
            	</div>	
@@ -741,16 +812,17 @@ color: inherit;
 
            	<div class="galler-group-02" style="margin-top: 8%">
            		<div class="img2">
-           			<img src="slide02-img02.png" alt="gallery"  class="imgs"/>
+           			<img src="slide02-img03.png" alt="gallery" class="imgs"/>
+           			
            		</div>
            		<div class="img4" style="margin-top:8%;">
-           			<img src="slide02-img04.png" alt="gallery" class="imgs"/>
+           			<img src="slide02-img02.png" alt="gallery"  class="imgs"/>
            		</div>
            	</div>
            </div>
 
            <div class="bookwrapper">
-           <a href="#!" class="bookspotbtn">BOOK YOUR SPOT</a>
+           <a href="https://anastazialuxurysuites.reserve-online.net/"  target="_blank" class="bookspotbtn">BOOK YOUR SPOT</a>
            </div>
 
 
@@ -828,6 +900,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
     $(".scan-and-save-txt").addClass("open").delay(500);
     $(".qr-code-container").addClass("open").delay(500);
     $(".close-icon").removeClass("closeAnim");
+
     }
 
     function closeSlide() {
@@ -849,12 +922,18 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   	  	if(x === "GRE")
   	  	{
   	  	document.getElementById("key").innerHTML = "ENG";
-  	  	document.getElementById("name").innerHTML = "Παρισης Γεωργιος";
-  	  	document.getElementById("tag").innerHTML = "ΥποπτΕραρχος ε.α.ΟικονομολΟγος";
+  	  	document.getElementById("name").innerHTML = "ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ";
+  	  	document.getElementById("tag").innerHTML = "ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ";
   	  	document.getElementById("para").innerHTML = "Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.                                       Προσφέρει σε κάθε πελάτη υπηρεσίες υψηλού επιπέδου σε πολύ προσιτές τιμές.";
+  	  	$(".gre").removeClass("none");
+  	  	$(".eng").addClass("none");
 
   	   }else
   	   {
+
+         $(".gre").addClass("none");
+  	  	$(".eng").removeClass("none");
+
         document.getElementById("key").innerHTML = "GRE";
   	   	document.getElementById("name").innerHTML = "Georgios Parisis";
   	  	document.getElementById("tag").innerHTML = "Lieutenant General e.a.Economist";
@@ -863,6 +942,23 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   	   }
   	  }
 
+
+  	  function play2() { 
+        
+        var audioElement = document.getElementById("audio");
+            
+            if (audioElement.paused) {
+                    /* Audio link for notification */ 
+                audioElement.play(); 
+                
+            }
+            else {
+                
+                audioElement.pause(); 
+                
+            }
+
+    } 
 
 
 </script>
