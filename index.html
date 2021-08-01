@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css'>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+
 <style type="text/css">
     *
 	{
@@ -435,10 +436,7 @@ color: inherit;
     	transition: 5s all ease-out;
 
     }
-    .zoomOut
-    {
-    	transform: scale(1);
-    }
+   
     .para
     {
     	margin-top: min(10vw,5vh);
@@ -644,6 +642,52 @@ color: inherit;
             height: min(72.993vw,36vh);
         }
 
+
+    .fscreen-gallery
+    {
+    	width: 100%;
+    	height: 100%;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	
+    }
+    .fscreen-gallery .close-icon
+    {
+    	 position: absolute;
+            top:4%;
+            right: 7%;
+            width: min(5vw,3vh);
+            height: min(5vw,3vh); z-index: 88;
+    }
+    .image-01-fscreengallery,.image-02-fscreengallery,
+    .image-03-fscreengallery,
+    .image-04-fscreengallery
+    {
+    	width: 100%;
+    	height: 100%;
+    	overflow: hidden;
+    	transition: 3s all ease-out;
+    }
+    .image-01-fs,.image-02-fs,.image-03-fs,.image-04-fs
+    {
+      transform: scale(1.2);
+      transition: 5s all ease-out;
+
+    }
+    .zoomOut
+    {
+    	transform: scale(1);
+    }
+
+    .swiper-wrapper,.two,.one,.swiper-slide-shadow-right
+    {
+    	transition: all 5s ease-out;
+
+    }
+
+
+
 </style>
 
 </head>
@@ -681,7 +725,7 @@ color: inherit;
 
 
 	<div class="swiper-wrapper">
-		<div class="swiper-slide swiper-slide-prev" style="border-radius: min(4vw,2vh);" >
+		<div class="swiper-slide one" style="border-radius: min(4vw,2vh);" >
          
 			<div class="slide-01">
                <audio id="audio">
@@ -736,7 +780,7 @@ color: inherit;
 			 <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
                 background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
                 loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:6%;
-                  "  data-swiper-parallax="-250"></lottie-player>
+                  " ></lottie-player>
 
 			
 			
@@ -758,7 +802,7 @@ color: inherit;
 		
 			
 			<div class="review-btn-wrap">
-			<a href="#" class="review-btn">view more</a>
+			<a href="#" class="next review-btn" >view more</a>
             </div> 
 
 			<div class="stack">
@@ -789,7 +833,7 @@ color: inherit;
 
 
 
-       <div class="swiper-slide slide-03">
+       <div class="swiper-slide two slide-03">
            <!-- content here slide 03 -->
            <div class="slide-03-container">
            	<div class="logo2">
@@ -799,10 +843,10 @@ color: inherit;
 
            	<div class="gallery">
            	<div class="galler-group-01"  style="margin-top: 18%">
-           		<div class="img1">
+           		<div class="img1" onclick="imageOneOpen()">
            			<img src="slide02-img01.png" alt="gallery" class="imgs" />
            		</div>
-           		<div class="img3" style="margin-top:8% ">
+           		<div class="img3" style="margin-top:8% " onclick="imageThreeOpen()">
            			<img src="slide02-img04.png" alt="gallery" class="imgs"/>
            			
            		</div>
@@ -811,11 +855,10 @@ color: inherit;
 
 
            	<div class="galler-group-02" style="margin-top: 8%">
-           		<div class="img2">
+           		<div class="img2" onclick="imageTwoOpen()">
            			<img src="slide02-img03.png" alt="gallery" class="imgs"/>
-           			
            		</div>
-           		<div class="img4" style="margin-top:8%;">
+           		<div class="img4" style="margin-top:8%;" onclick="imageFourOpen()">
            			<img src="slide02-img02.png" alt="gallery"  class="imgs"/>
            		</div>
            	</div>
@@ -835,28 +878,63 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
 			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
 			 </div>
-		</div>	 
+		</div>	
 
-        </div>
-     <img src="Vector.png" alt="vector" class="vector" style="height: auto;" />
+		
+
+
+        
 		</div>
+		<img src="Vector.png" alt="vector" class="vector" style="height: auto;" />
 
 		</div>
 		
 		
 	</div>
-	<!-- Add Arrows -->
-	<div class="next"></div>
-	<div class="prev"></div>
+	
 </div>
+
+
+
+<div class="fscreen-gallery" style="background: black;z-index: 1;">
+			<img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  />
+			<div class="image-01-fscreengallery">
+				<img src="slide02-img01.png" alt="img" class="image-01-fs" />
+				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(1)"  />
+                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(1)"  />
+			</div>
+			<div class="image-02-fscreengallery">
+				<img src="slide02-img03.png" alt="img" class="image-02-fs"/>
+				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(2)"  />
+
+			     <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(2)"  />
+				
+			</div>
+
+
+			<div class="image-03-fscreengallery">
+              <img src="slide02-img04.png" alt="img" class="image-03-fs"/>
+              <img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(3)"  />
+                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(3)"  />
+			</div>
+			<div class="image-04-fscreengallery">
+				<img src="slide02-img02.png" alt="img" class="image-04-fs" />
+				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(4)"  />
+                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(4)"  />
+			</div>
+
+			
+			
+</div> 
 <!-- partial -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
+
+
 <script type="text/javascript">
 	var swiper = new Swiper('.swiper-container', {
 		  effect: 'coverflow',
-		  observer: true,
-          observeParents: true,
+		  
 		  grabCursor: true,
 		  centeredSlides: true,
 		  slidesPerView: 'auto',
@@ -868,13 +946,53 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 		    modifier: 1,
 		    slideShadows : true
 		  },
-		  
-  		navigation: {
-  			nextEl: '.next',
-  			prevEl: '.prev',
-  		}
+		  navigation: { nextEl: '.next', prevEl: '.prev' }
   	});
 
+
+    function swipenext(selector)
+    {
+    	
+
+    	 $(".swiper-wrapper").css('transform', 'translate3d(-980px, 0px, 0px)' );
+         $(".swiper-wrapper").css('transition-duration', '0ms' );
+
+         $(".one").addClass('swiper-slide-prev');
+         $(".one").css('transform', 'translate3d(200px, 0px, -1500px) rotateX(0deg) rotateY(-100deg)' );
+         $(".one").css('z-index', '0' );
+         $(".one").css('transition-duration', '900ms' );
+
+        
+        
+  
+
+
+         $(".two").removeClass('swiper-slide-next');
+         $(".two").addClass('swiper-slide-active');
+         $(".two").css('transform','translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)' );
+         $(".two").css('z-index', '1' );
+         $(".two").css('transition-duration', '900ms' );
+         $(".swiper-slide-shadow-right").css('opacity','0');
+         $(".swiper-slide-shadow-right").css('transition-duration','0ms');
+
+
+    
+  
+  
+         
+    }
+ 
+  
+
+  	$(".fscreen-gallery").fadeOut();
+  	$(".image-01-fscreengallery").fadeOut();
+  	$(".image-02-fscreengallery").fadeOut();
+  	$(".image-03-fscreengallery").fadeOut();
+  	$(".image-04-fscreengallery").fadeOut();
+
+
+
+    
 
   	  setInterval(function () {
 
@@ -893,7 +1011,125 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
     }, 1000);
 
-  	   function openSlide() {
+  	function swipeNext()
+  	{
+  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".image-01-fscreengallery").fadeIn('fast');
+  		$(".image-01-fs").addClass('zoomOut');
+  	} 
+
+  	function imageOneOpen()
+  	{
+  		$(".fscreen-gallery").fadeIn('slow');
+  		
+  		$(".image-01-fscreengallery").fadeIn('fast');
+  		$(".image-01-fs").addClass('zoomOut');
+
+  	} 
+  	function imageTwoOpen()
+  	{
+  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".image-02-fscreengallery").fadeIn('fast');
+  		$(".image-02-fs").addClass('zoomOut');
+  	} 
+  	function imageThreeOpen()
+  	{
+  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".image-03-fscreengallery").fadeIn('fast');
+  		$(".image-03-fs").addClass('zoomOut');
+  	} 
+  	function imageFourOpen()
+  	{
+  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".image-04-fscreengallery").fadeIn('fast');
+  		$(".image-04-fs").addClass('zoomOut');
+  	} 
+
+
+  	function arrownext(e)
+  	{
+
+           if(e===1)
+           {
+           	$(".image-01-fscreengallery").fadeOut()
+           	$(".image-02-fscreengallery").fadeIn();
+  		    $(".image-01-fs").removeClass('zoomOut');
+  		    $(".image-02-fs").addClass('zoomOut');
+           }
+           if(e===2)
+           {
+           	$(".image-02-fscreengallery").fadeOut()
+           	$(".image-03-fscreengallery").fadeIn();
+  		    $(".image-02-fs").removeClass('zoomOut');
+  		    $(".image-03-fs").addClass('zoomOut');
+           }
+           if(e===3)
+           {
+           	$(".image-03-fscreengallery").fadeOut()
+           	$(".image-04-fscreengallery").fadeIn();
+  		    $(".image-03-fs").removeClass('zoomOut');
+  		    $(".image-04-fs").addClass('zoomOut');
+           }
+           if(e===4)
+           {
+           	$(".image-04-fscreengallery").fadeOut()
+           	$(".image-01-fscreengallery").fadeIn();
+  		    $(".image-04-fs").removeClass('zoomOut');
+  		    $(".image-01-fs").addClass('zoomOut');
+           }
+  	}
+
+
+  	function arrowprev(e)
+  	{
+  		 if(e===1)
+           {
+
+           	$(".image-01-fscreengallery").fadeOut();
+  		    $(".image-04-fscreengallery").fadeIn();
+  		    $(".image-01-fs").removeClass('zoomOut');
+  		    $(".image-04-fs").addClass('zoomOut');
+  		 
+           }
+
+           if(e===2)
+           {
+  		    $(".image-02-fscreengallery").fadeOut();
+  		    $(".image-01-fscreengallery").fadeIn()
+  		    $(".image-02-fs").removeClass('zoomOut');
+  		    $(".image-01-fs").addClass('zoomOut');
+           }
+           if(e===3)
+           {
+  		    $(".image-03-fscreengallery").fadeOut();
+  		    $(".image-02-fscreengallery").fadeIn()
+  		    $(".image-03-fs").removeClass('zoomOut');
+  		    $(".image-02-fs").addClass('zoomOut');
+           }
+           if(e===4)
+           {
+  		    $(".image-04-fscreengallery").fadeOut();
+  		    $(".image-03-fscreengallery").fadeIn()
+  		    $(".image-04-fs").removeClass('zoomOut');
+  		    $(".image-03-fs").addClass('zoomOut');
+           }
+  	}
+  	
+
+  	function closegallery()
+  	{
+  		$(".fscreen-gallery").fadeOut('slow');
+  		$(".image-01-fscreengallery").fadeOut();
+  		$(".image-02-fscreengallery").fadeOut();
+  		$(".image-03-fscreengallery").fadeOut();
+  		$(".image-04-fscreengallery").fadeOut();
+  		$(".image-01-fs").removeClass('zoomOut');
+  		$(".image-02-fs").removeClass('zoomOut');
+  		$(".image-03-fs").removeClass('zoomOut');
+  		$(".image-04-fs").removeClass('zoomOut');
+  	} 
+
+  	function openSlide() {
     $(".share-slide").addClass("open")
     $(".icon-grid").addClass("open").delay(500);
     $(".share-headline").addClass("open").delay(500);
