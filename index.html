@@ -633,8 +633,8 @@ color: inherit;
             position: absolute;
             bottom: 1.5%;
             
-            width: min(8vw,6vh);
-            height: min(8vw,6vh);
+            width: min(7vw,4.5vh);
+            height: min(7vw,4.5vh);
         }
         lottie-player
         {
@@ -667,12 +667,12 @@ color: inherit;
     	width: 100%;
     	height: 100%;
     	overflow: hidden;
-    	transition: 3s all ease-out;
+    	
     }
     .image-01-fs,.image-02-fs,.image-03-fs,.image-04-fs
     {
       transform: scale(1.2);
-      transition: 5s all ease-out;
+      transition: 5s  all ease;
 
     }
     .zoomOut
@@ -771,16 +771,17 @@ color: inherit;
 			 	</a>
 			</div>
 
-            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: center;margin-top: min(8vw,4vh);"> 
+            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: flex-end;margin-top: min(8vw,4vh);"> 
+            	<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
+                background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
+                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:min(16vw,8vh);bottom: auto;
+                  " ></lottie-player>
 			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
 			 	 <img src="next.png"  alt="next" class="down-arrow bounce" />
 			</div> 	
 
 
-			 <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
-                background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
-                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:6%;
-                  "  data-swiper-parallax="-250"></lottie-player>
+			 
 
 			
 			
@@ -795,8 +796,8 @@ color: inherit;
 
 			<div class="reviews">
 				<a href="#!"><img src="logo.png" alt="insta" class="logo" /></a>
-				<a href="#!"><img src="Tripadvisor.png" alt="Tripadvisor" class="review-icon" /></a>
-				<a href="#!"><img src="booking.png" alt="bookings"  class="review-icon"/></a>
+				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="Tripadvisor.png"   alt="Tripadvisor" class="review-icon" /></a>
+			
 			 	       
 			</div>
 		
@@ -837,7 +838,7 @@ color: inherit;
            <!-- content here slide 03 -->
            <div class="slide-03-container">
            	<div class="logo2">
-           		<img src="logo2.png" alt="logo2" />
+           		<img src="logo2.png" alt="logo2" style="height: auto;" />
            	</div>
            	<h1 class="slide-03-headline">The Crossing Between Business & Pleasure is Just a Breath Away</h1>
 
@@ -927,7 +928,8 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 			
 </div> 
 <!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
 
 
@@ -992,6 +994,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
+   
     
 
   	  setInterval(function () {
@@ -1013,10 +1016,9 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   	function swipeNext()
   	{
-  		/*$(".fscreen-gallery").fadeIn('slow');
+  		$(".fscreen-gallery").fadeIn('slow');
   		$(".image-01-fscreengallery").fadeIn('fast');
-  		$(".image-01-fs").addClass('zoomOut');*/
-		alert('swipe');
+  		$(".image-01-fs").addClass('zoomOut');
   	} 
 
   	function imageOneOpen()
@@ -1052,29 +1054,29 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
            if(e===1)
            {
-           	$(".image-01-fscreengallery").fadeOut()
-           	$(".image-02-fscreengallery").fadeIn();
+           	$(".image-01-fscreengallery").fadeOut(800,"linear")
+           	$(".image-02-fscreengallery").fadeIn(800,"linear");
   		    $(".image-01-fs").removeClass('zoomOut');
   		    $(".image-02-fs").addClass('zoomOut');
            }
            if(e===2)
            {
-           	$(".image-02-fscreengallery").fadeOut()
-           	$(".image-03-fscreengallery").fadeIn();
+           	$(".image-02-fscreengallery").fadeOut(800,"linear")
+           	$(".image-03-fscreengallery").fadeIn(800,"linear");
   		    $(".image-02-fs").removeClass('zoomOut');
   		    $(".image-03-fs").addClass('zoomOut');
            }
            if(e===3)
            {
-           	$(".image-03-fscreengallery").fadeOut()
-           	$(".image-04-fscreengallery").fadeIn();
+           	$(".image-03-fscreengallery").fadeOut(800,"linear")
+           	$(".image-04-fscreengallery").fadeIn(800,"linear");
   		    $(".image-03-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
            }
            if(e===4)
            {
-           	$(".image-04-fscreengallery").fadeOut()
-           	$(".image-01-fscreengallery").fadeIn();
+           	$(".image-04-fscreengallery").fadeOut(800,"linear")
+           	$(".image-01-fscreengallery").fadeIn(800,"linear");
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
            }
@@ -1086,8 +1088,8 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		 if(e===1)
            {
 
-           	$(".image-01-fscreengallery").fadeOut();
-  		    $(".image-04-fscreengallery").fadeIn();
+           	$(".image-01-fscreengallery").fadeOut(800,"linear");
+  		    $(".image-04-fscreengallery").fadeIn(800,"linear");
   		    $(".image-01-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
   		 
@@ -1095,22 +1097,22 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
            if(e===2)
            {
-  		    $(".image-02-fscreengallery").fadeOut();
-  		    $(".image-01-fscreengallery").fadeIn()
+  		    $(".image-02-fscreengallery").fadeOut(800,"linear");
+  		    $(".image-01-fscreengallery").fadeIn(800,"linear")
   		    $(".image-02-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
            }
            if(e===3)
            {
-  		    $(".image-03-fscreengallery").fadeOut();
-  		    $(".image-02-fscreengallery").fadeIn()
+  		    $(".image-03-fscreengallery").fadeOut(800,"linear");
+  		    $(".image-02-fscreengallery").fadeIn(800,"linear")
   		    $(".image-03-fs").removeClass('zoomOut');
   		    $(".image-02-fs").addClass('zoomOut');
            }
            if(e===4)
            {
-  		    $(".image-04-fscreengallery").fadeOut();
-  		    $(".image-03-fscreengallery").fadeIn()
+  		    $(".image-04-fscreengallery").fadeOut(800,"linear");
+  		    $(".image-03-fscreengallery").fadeIn(800,"linear")
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-03-fs").addClass('zoomOut');
            }
