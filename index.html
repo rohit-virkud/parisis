@@ -437,7 +437,7 @@ color: inherit;
 
     }
    
-    .para
+    .para,.para-gre
     {
     	margin-top: min(10vw,5vh);
     	width: 95%;
@@ -447,6 +447,10 @@ color: inherit;
     	line-height: 150%;
     	font-size: min(3vw,1.5vh);
     	white-space: pre-line;
+    }
+    .para-gre
+    {
+    	width: 100%;
     }
 
     .slide-03
@@ -820,13 +824,23 @@ color: inherit;
 				    </div>
 				   </div>  
 
-				    <div style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
+				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
 					<h1 class="second-screen-h1 eng">Georgios Parisis</h1>
 					<h1 class="second-screen-h1 gre none">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
 					<p class="adr-tag" id="tag">Lieutenant General e.a.Economist</p>
 					<p class="slide02-phone-txt">+30 6945376731</p>
 					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
 				    </div>
+
+				    <div class="gre-txt none" style="z-index: 2;position:absolute;margin-left:  min(20vw,13vh);">
+					<h1 class="second-screen-h1 gre" style="font-size:min(7vw,3vh)">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
+					<p class="adr-tag" id="tag" style="margin-top:min(1.5vw,0.8vh)">ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p>
+					<p class="slide02-phone-txt">+30 6945376731</p>
+					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
+				    </div>
+
+
+
 			    </div>
 		    </div>
 		</div>
@@ -873,6 +887,10 @@ color: inherit;
            <p class="para" id="para">Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
 
 For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.</p>
+
+<p class="para-gre none" id="para">Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.
+
+Προσφέρει σε κάθε πελάτη υπηρεσίες υψηλού επιπέδου σε πολύ προσιτές τιμές.</p>
  
         <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;margin-top: min(6vw,3vh)">
             <div class="social">
@@ -1162,20 +1180,25 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   	  	{
   	  	document.getElementById("key").innerHTML = "ENG";
   	  	document.getElementById("name").innerHTML = "ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ";
-  	  	document.getElementById("tag").innerHTML = "ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ";
-  	  	document.getElementById("para").innerHTML = "Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.                                       Προσφέρει σε κάθε πελάτη υπηρεσίες υψηλού επιπέδου σε πολύ προσιτές τιμές.";
-  	  	$(".gre").removeClass("none");
-  	  	$(".eng").addClass("none");
+  	  	$(".para-gre").removeClass("none");
+  	  	$(".para").addClass("none");
+  	  	
+  	  	$(".gre-txt").removeClass("none");
+  	  	$(".eng-txt").addClass("none");
+
 
   	   }else
   	   {
 
-         $(".gre").addClass("none");
-  	  	$(".eng").removeClass("none");
+  	   	$(".para-gre").addClass("none");
+  	   	$(".para").removeClass("none");
+  	  	
+
+        $(".gre-txt").addClass("none");
+  	  	$(".eng-txt").removeClass("none");
 
         document.getElementById("key").innerHTML = "GRE";
   	   	document.getElementById("name").innerHTML = "Georgios Parisis";
-  	  	document.getElementById("tag").innerHTML = "Lieutenant General e.a.Economist";
   	  	document.getElementById("para").innerHTML = "Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali).                                                                                                                                                   For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.";
 
   	   }
