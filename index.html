@@ -654,7 +654,8 @@ color: inherit;
     	position: fixed;
     	top: 0;
     	left: 0;
-    	  transition: 5s  all ease-out;
+    	transition: 5s  all ease-out;
+    	z-index: -1;
     
     	
     }
@@ -922,7 +923,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
-<div class="fscreen-gallery" style="background: black;z-index: 1;">
+<div class="fscreen-gallery" style="background: black;">
 			<img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  />
 			<div class="image-01-fscreengallery">
 				<img src="slide02-img01.png" alt="img" class="image-01-fs" />
@@ -975,6 +976,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 		  },
 		  navigation: { nextEl: '.next', prevEl: '.prev' }
   	});
+
 
 
     function swipenext(selector)
@@ -1041,35 +1043,39 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   	function swipeNext()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".fscreen-gallery").fadeIn();
   		$(".image-01-fscreengallery").fadeIn('fast');
   		$(".image-01-fs").addClass('zoomOut');
   	} 
 
   	function imageOneOpen()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
+  		$(".fscreen-gallery").css('z-index','1');
+  		$(".fscreen-gallery").fadeIn();
   		
-  		$(".image-01-fscreengallery").fadeIn('fast');
+  		$(".image-01-fscreengallery").fadeIn();
   		$(".image-01-fs").addClass('zoomOut');
 
   	} 
   	function imageTwoOpen()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
-  		$(".image-02-fscreengallery").fadeIn('fast');
+  		$(".fscreen-gallery").css('z-index','1');
+  		$(".fscreen-gallery").fadeIn();
+  		$(".image-02-fscreengallery").fadeIn();
   		$(".image-02-fs").addClass('zoomOut');
   	} 
   	function imageThreeOpen()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
-  		$(".image-03-fscreengallery").fadeIn('fast');
+  		$(".fscreen-gallery").css('z-index','1');
+  		$(".fscreen-gallery").fadeIn();
+  		$(".image-03-fscreengallery").fadeIn();
   		$(".image-03-fs").addClass('zoomOut');
   	} 
   	function imageFourOpen()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
-  		$(".image-04-fscreengallery").fadeIn('fast');
+  		$(".fscreen-gallery").css('z-index','1');
+  		$(".fscreen-gallery").fadeIn();
+  		$(".image-04-fscreengallery").fadeIn();
   		$(".image-04-fs").addClass('zoomOut');
   	} 
 
