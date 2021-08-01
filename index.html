@@ -654,6 +654,8 @@ color: inherit;
     	position: fixed;
     	top: 0;
     	left: 0;
+    	  transition: 5s  all ease-out;
+    
     	
     }
     .fscreen-gallery .close-icon
@@ -663,6 +665,9 @@ color: inherit;
             right: 7%;
             width: min(5vw,3vh);
             height: min(5vw,3vh); z-index: 88;
+          
+           
+
     }
     .image-01-fscreengallery,.image-02-fscreengallery,
     .image-03-fscreengallery,
@@ -671,12 +676,14 @@ color: inherit;
     	width: 100%;
     	height: 100%;
     	overflow: hidden;
+    	transition: 1s  all ease-out;
+    	
     	
     }
     .image-01-fs,.image-02-fs,.image-03-fs,.image-04-fs
     {
       transform: scale(1.2);
-      transition: 5s  all ease;
+      transition: 5s  all ease-out;
 
     }
     .zoomOut
@@ -1072,29 +1079,33 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
            if(e===1)
            {
+
+           	$(".image-02-fscreengallery").fadeIn(500,"linear");
            	$(".image-01-fscreengallery").fadeOut(800,"linear")
-           	$(".image-02-fscreengallery").fadeIn(800,"linear");
-  		    $(".image-01-fs").removeClass('zoomOut');
-  		    $(".image-02-fs").addClass('zoomOut');
+  		    $(".image-01-fs").delay(800).removeClass('zoomOut');
+  		    $(".image-02-fs").delay(800).addClass('zoomOut');
            }
            if(e===2)
            {
+           		$(".image-03-fscreengallery").fadeIn(500,"linear");
            	$(".image-02-fscreengallery").fadeOut(800,"linear")
-           	$(".image-03-fscreengallery").fadeIn(800,"linear");
+           
   		    $(".image-02-fs").removeClass('zoomOut');
   		    $(".image-03-fs").addClass('zoomOut');
            }
            if(e===3)
            {
-           	$(".image-03-fscreengallery").fadeOut(800,"linear")
            	$(".image-04-fscreengallery").fadeIn(800,"linear");
+           	$(".image-03-fscreengallery").fadeOut(800,"linear")
+           	
   		    $(".image-03-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
            }
            if(e===4)
            {
+           		$(".image-01-fscreengallery").fadeIn(800,"linear");
            	$(".image-04-fscreengallery").fadeOut(800,"linear")
-           	$(".image-01-fscreengallery").fadeIn(800,"linear");
+           
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
            }
