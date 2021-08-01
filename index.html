@@ -780,7 +780,7 @@ color: inherit;
 			 <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
                 background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
                 loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:6%;
-                  " ></lottie-player>
+                  "  data-swiper-parallax="-250"></lottie-player>
 
 			
 			
@@ -802,7 +802,7 @@ color: inherit;
 		
 			
 			<div class="review-btn-wrap">
-			<a href="#" class="next review-btn" >view more</a>
+			<a href="#" class="next review-btn" onclick="swipenext()">view more</a>
             </div> 
 
 			<div class="stack">
@@ -1013,9 +1013,10 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   	function swipeNext()
   	{
-  		$(".fscreen-gallery").fadeIn('slow');
+  		/*$(".fscreen-gallery").fadeIn('slow');
   		$(".image-01-fscreengallery").fadeIn('fast');
-  		$(".image-01-fs").addClass('zoomOut');
+  		$(".image-01-fs").addClass('zoomOut');*/
+		alert('swipe');
   	} 
 
   	function imageOneOpen()
