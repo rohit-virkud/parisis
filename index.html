@@ -758,9 +758,9 @@ color: inherit;
 			 	<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png"  alt="logo" class="logo-img" />
 			 </div>
 			 <h1 class="headline" id="name">Georgios Parisis</h1>
-			 <p class="tag">ANASTAZIA LUXURY SUITES & SPA</p>
+			 <p class="tag" id="tag">ANASTAZIA LUXURY SUITES & SPA</p>
 
-			 <div class="social">
+			 <div class="social" id="social-top">
 			 	<a href="https://www.facebook.com/anastaziahotel/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-top"/></a>
 			 	<a href="https://www.instagram.com/anastazia_luxury_suites_spa/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta" id="insta-top"/></a>
 			 </div>
@@ -784,13 +784,13 @@ color: inherit;
 			 	</a>
 			</div>
 
-            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: flex-end;margin-top: min(8vw,4vh);"> 
+            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: flex-end;" id="save-container"> 
             	<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
-                background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
-                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:min(16vw,8vh);bottom: auto;
+                background="transparent"  speed="1"  class="lottie-anim" id="lottie" onclick="play2()"   
+                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;bottom: auto;
                   " ></lottie-player>
-			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
-			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" />
+			 	<a href="#" class="primary-btn" id="primary-btn">SAVE MY CONTACT</a>
+			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" id="bounce-img" />
 			</div> 	
 
 
@@ -802,50 +802,49 @@ color: inherit;
       </div>
 
         <div class="slide-02">
-          <div class="slide-02-img">
+          <div class="slide-02-img" id="slide-02-img">
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/image02.png" alt="img" class="slide-02-img-img" />
 			</div>
-			<div class="image-spread"></div>
+			<div class="image-spread" id="image-spread"></div>
 
 			<div class="reviews">
-				<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png" alt="insta" class="logo" /></a>
-				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Tripadvisor.png"   alt="Tripadvisor" class="review-icon" /></a>
+				<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png" alt="insta" class="logo" id="logo-bottom" /></a>
+				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Tripadvisor.png"   alt="Tripadvisor" class="review-icon" id="trip" /></a>
 			
 			 	       
 			</div>
 		
 			
 			<div class="review-btn-wrap">
-			<a href="#" class="next review-btn" onclick="swipenext()">view more</a>
+			<a href="#" class="next review-btn" id="rw-btn" onclick="swipenext()">view more</a>
             </div> 
 
-			<div class="stack">
+			<div class="stack" id="stack">
 				<div class="stack-wrapper">
 					
                   <div class="imgandsocial">
-					<div class="slide-02-profile">
+					<div class="slide-02-profile" id="slide-02-profile">
 					<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/profile.png" alt="profile" />
 				    </div>
-				    <div class="social">
-				    	 <a href="https://www.instagram.com/georgiosparisis/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
-				    	<a href="https://www.facebook.com/G.EM.PARISIS" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
+				    <div class="social" id="social-bottom">
+				    	 <a href="https://www.instagram.com/georgiosparisis/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta" id="insta-bottom" /></a>
+				    	<a href="https://www.facebook.com/G.EM.PARISIS" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-bottom"/></a>
 			 	       
 				    </div>
 				   </div>  
 
-				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);">
-					<h1 class="second-screen-h1 eng">Georgios Parisis</h1>
-					<h1 class="second-screen-h1 gre none">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
-					<p class="adr-tag" id="tag">Lieutenant General e.a.Economist</p>
-					<p class="slide02-phone-txt">+30 6945376731</p>
-					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
+				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);" id="eng-txt">
+					<h1 class="second-screen-h1 eng" id="second-screen-h1">Georgios Parisis</h1>
+					<a href="#!"><p class="adr-tag" id="tag-bottom">Lieutenant General e.a.Economist</p></a>
+					<a href="#!"><p class="slide02-phone-txt" id="number">+30 6945376731</p></a>
+					<a href="#!"><p class="slide02-adr-txt" id="email">g.em.parisis@gmail.com</p></a>
 				    </div>
 
-				    <div class="gre-txt none" style="z-index: 2;position:absolute;margin-left:  min(22vw,14vh);">
-					<h1 class="second-screen-h1 gre" style="font-size:min(7vw,3vh)">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
-					<p class="adr-tag" id="tag" style="margin-top:min(1.5vw,0.8vh)">ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p>
-					<p class="slide02-phone-txt">+30 6945376731</p>
-					<p class="slide02-adr-txt">g.em.parisis@gmail.com</p>
+				    <div class="gre-txt none" style="z-index: 2;position:absolute;" id="gre-txt">
+					<h1 class="second-screen-h1 gre" id="h1-gre" style="font-size:min(7vw,3vh)">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
+					<a href="#!"><p class="adr-tag" id="tag-gre" style="margin-top:min(1.5vw,0.8vh)">ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p></a>
+					<a href="#!"><p class="slide02-phone-txt" id="phone-gre">+30 6945376731</p></a>
+					<a href="#!"><p class="slide02-adr-txt" id="email-gre">g.em.parisis@gmail.com</p></a>
 				    </div>
 
 
@@ -987,9 +986,14 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
     return `min(${width}vw, ${(window.innerHeight * heightPercentage) / 100}px)`;
     };
 
+    
+    const getHeight = (heightPercentage) => {
+    return `${(window.innerHeight * heightPercentage) / 100}px`;
+    };
+
     function sizes()
     {
-        console.log(document.getElementById("logo-tag"));
+        
         document.getElementById("logo-tag").style.width = getSize(20,12);
         document.getElementById("logo-tag").style.height = getSize(20,12);
 
@@ -1033,6 +1037,102 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
         document.getElementById("contact-txt4").style.marginLeft = getSize(5,3);
         document.getElementById("contact-txt4").style.fontSize = getSize(3.5,2.5);
 
+        document.getElementById("save-container").style.marginTop = getSize(8,4);
+        document.getElementById("lottie").style.left = getSize(16,8);
+        document.getElementById("lottie").style.width = getSize(7,4.5);
+        document.getElementById("lottie").style.height = getSize(7,4.5);
+
+        document.getElementById("primary-btn").style.paddingLeft = getSize(4.5,2.5);
+        document.getElementById("primary-btn").style.paddingRight = getSize(4.5,2.5);
+        document.getElementById("primary-btn").style.paddingTop = getSize(3.4,2);
+        document.getElementById("primary-btn").style.paddingBottom = getSize(3.4,2);
+
+        document.getElementById("primary-btn").style.borderRadius = getSize(10,5);
+        document.getElementById("primary-btn").style.fontSize = getSize(3,1.5);
+
+        document.getElementById("bounce-img").style.width = getSize(10,5);
+        document.getElementById("bounce-img").style.height = getSize(10,5);
+
+
+        document.getElementById("right-polygon").style.width = getSize(16,8);
+        document.getElementById("right-polygon").style.height = getSize(50,25);
+
+
+        document.getElementById("left-polygon").style.width = getSize(12,6);
+        document.getElementById("left-polygon").style.height = getSize(50,25);
+
+
+        document.getElementById("share-btn").style.height = getSize(10,5);
+        document.getElementById("share-btn").style.width = getSize(10,5);
+
+        document.getElementById("key").style.top = getSize(20,11);
+        document.getElementById("key").style.right = getSize(6.5,3.5);
+        document.getElementById("key").style.fontSize = getSize(3,1.8);
+
+
+        document.getElementById("slide-02-img").style.height = getHeight(50);
+        document.getElementById("image-spread").style.height = getHeight(50)
+ 
+        document.getElementById("logo-bottom").style.height = getSize(14,7);
+        document.getElementById("logo-bottom").style.width = getSize(14,7);
+
+        document.getElementById("trip").style.height = getSize(9,4.5);
+        document.getElementById("trip").style.width = getSize(9,4.5);
+        document.getElementById("trip").style.marginLeft = getSize(4,1.8);
+
+        document.getElementById("rw-btn").style.padding = getSize(4,1.8);
+        document.getElementById("rw-btn").style.borderRadius = getSize(6,3);
+        document.getElementById("rw-btn").style.fontSize = getSize(3,1.5);
+
+              
+        document.getElementById("stack").style.marginTop = getSize(15,7.5);
+        document.getElementById("slide-02-profile").style.width = getSize(40,20);
+        document.getElementById("slide-02-profile").style.height = getSize(48,24);
+
+        document.getElementById("social-bottom").style.marginTop = getSize(4.5,2.2);
+        document.getElementById("social-top").style.marginTop = getSize(4.5,2.2);
+
+        document.getElementById("insta-bottom").style.width = getSize(10,5);
+        document.getElementById("insta-bottom").style.height = getSize(10,5);
+
+        document.getElementById("fb-bottom").style.width = getSize(10,5);
+        document.getElementById("fb-bottom").style.height = getSize(10,5);
+
+        document.getElementById("eng-txt").style.marginLeft = getSize(30,15);
+
+
+        document.getElementById("second-screen-h1").style.fontSize = getSize(8,4);
+        document.getElementById("second-screen-h1").style.marginTop = getSize(5,2.5);
+
+        document.getElementById("tag-bottom").style.fontSize = getSize(3,2);
+        document.getElementById("number").style.fontSize = getSize(3.8,1.8);
+        document.getElementById("number").style.marginTop = getSize(4,2);
+
+        document.getElementById("email").style.marginTop = getSize(4,2);
+        document.getElementById("email").style.fontSize = getSize(4,2);
+
+        
+        document.getElementById("gre-txt").style.marginLeft = getSize(22,14);
+
+        document.getElementById("h1-gre").style.marginTop = getSize(8,4);
+        document.getElementById("h1-gre").style.fontSize = getSize(7,3);
+
+        document.getElementById("tag-gre").style.fontSize = getSize(3,2);
+        document.getElementById("tag-gre").style.marginTop = getSize(1.5,0.8);
+
+        document.getElementById("phone-gre").style.fontSize = getSize(3.8,1.8);
+        document.getElementById("phone-gre").style.marginTop = getSize(4,2);
+
+        document.getElementById("email-gre").style.fontSize = getSize(4,2);
+        document.getElementById("email-gre").style.marginTop = getSize(4,2);
+
+       
+
+   
+    
+         
+
+         
     }
 
     
@@ -1131,6 +1231,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		
   		$(".image-01-fscreengallery").fadeIn('fast');
   		$(".image-01-fs").addClass('zoomOut');
+        $(".close-icon").removeClass("closeAnim");
 
   	} 
   	function imageTwoOpen()
@@ -1141,6 +1242,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		$(".fscreen-gallery").fadeIn();
   		$(".image-02-fscreengallery").fadeIn('fast');
   		$(".image-02-fs").addClass('zoomOut');
+        $(".close-icon").removeClass("closeAnim");
   	} 
   	function imageThreeOpen()
   	{
@@ -1150,6 +1252,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		$(".fscreen-gallery").fadeIn();
   		$(".image-03-fscreengallery").fadeIn('fast');
   		$(".image-03-fs").addClass('zoomOut');
+        $(".close-icon").removeClass("closeAnim");
   	} 
   	function imageFourOpen()
   	{
@@ -1159,6 +1262,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		$(".fscreen-gallery").fadeIn();
   		$(".image-04-fscreengallery").fadeIn("fast");
   		$(".image-04-fs").addClass('zoomOut');
+        $(".close-icon").removeClass("closeAnim");
   	} 
 
 
@@ -1250,6 +1354,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   		$(".image-04-fs").removeClass('zoomOut');
          $(".slide-03-headline").delay(5000).css('opacity','1')
            $(".logo2").delay(5000).css('opacity','1');
+            $(".close-icon").addClass("closeAnim").delay(1000);
   	} 
 
   	function openSlide() {
