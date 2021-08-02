@@ -10,6 +10,9 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
 <link rel="stylesheet" type="text/css" href="locomotive-scroll.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 <style type="text/css">
     *
 	{
@@ -358,7 +361,7 @@ color: inherit;
     .review-btn-wrap
     {
     	position: absolute;
-    	top: 142%;
+    	top: 140%;
     	width: 100%;
     	display: flex;
     	flex-shrink: 0;
@@ -702,6 +705,365 @@ color: inherit;
 
 
 
+.txt-anim {
+  margin-top: 0.5vw;
+
+  letter-spacing: 2px;
+  font-size: 2vw;
+  color: #ffffff;
+  -webkit-animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+          animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+}
+
+.mouse {
+  background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
+  position: relative;
+  width: 8vw;
+  height: 15vw;
+  transform: rotate(90deg);
+  border-radius: 100px;
+  background-size: 100% 200%;
+  -webkit-animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+          animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+}
+.mouse:before, .mouse:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before {
+  width: 7vw;
+    height: 14vw;
+    background-color: #154f83;
+
+  border-radius: 100px;
+}
+.mouse:after {
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-animation: trackBallSlide 5s linear infinite;
+          animation: trackBallSlide 5s linear infinite;
+}
+
+@-webkit-keyframes colorSlide {
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%, 100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes colorSlide {
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #000000;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #000000;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #000000;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #000000;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #000000;
+  }
+  90%, 100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+}
+@-webkit-keyframes nudgeMouse {
+  0% {
+
+    transform: rotate(90deg) translateY(0);
+  }
+  20% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  30% {
+    transform: rotate(90deg) translateY(0);
+  }
+  50% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  60% {
+    transform: rotate(90deg) translateY(0);
+  }
+  80% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  90% {
+    transform: rotate(90deg) translateY(0);
+  }
+}
+@keyframes nudgeMouse {
+  0% {
+
+    transform: rotate(90deg) translateY(0);
+  }
+  20% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  30% {
+    transform: rotate(90deg) translateY(0);
+  }
+  50% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  60% {
+    transform: rotate(90deg) translateY(0);
+  }
+  80% {
+    transform: rotate(90deg) translateY(8px);
+  }
+  90% {
+    transform: rotate(90deg) translateY(0);
+  }
+}
+@-webkit-keyframes nudgeText {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes colorText {
+  21% {
+    color: #154f83;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #154f83;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #154f83;
+  }
+  90% {
+    color: #ffffff;
+  }
+}
+@keyframes colorText {
+  21% {
+    color: #154f83;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #154f83;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #154f83;
+  }
+  90% {
+    color: #ffffff;
+  }
+}
+
+.arrow-wrapper
+{
+    animation: bounceLeft 2s infinite;
+}
+
+.fa-arrow-left {
+  -webkit-animation: bounceLeft 2s infinite;
+  
+}
+
+@keyframes bounceLeft {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  60% {
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+
 </style>
 
 </head>
@@ -791,7 +1153,7 @@ color: inherit;
                 loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;bottom: auto;
                   " ></lottie-player>
 			 	<a href="#" class="primary-btn" id="primary-btn" data-scroll>SAVE MY CONTACT</a>
-			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" id="bounce-img" data-scroll/>
+			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" id="bounce-img" onscroll="scrollUp()"  data-scroll/>
 			</div> 	
 
 
@@ -802,7 +1164,7 @@ color: inherit;
           </div>
       </div>
 
-        <div class="slide-02" >
+        <div class="slide-02" id="slide-02x">
           <div class="slide-02-img" id="slide-02-img" data-scroll>
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/image02.png" alt="img" class="slide-02-img-img" />
 			</div>
@@ -816,9 +1178,15 @@ color: inherit;
 			</div>
 		
 			
-			<div class="review-btn-wrap" data-scroll>
+			<!--<div class="review-btn-wrap" data-scroll>
 			<a href="#" class="next review-btn" id="rw-btn" onclick="swipenext()">view more</a>
-            </div> 
+            </div> -->
+
+            <div class="review-btn-wrap" style="flex-direction: column;align-items: center;">
+                <div class="mouse" id="mouse-anim"></div>
+                <p class="txt-anim" id="txt-anim">swipe left to view more</p>
+            </div>
+            
 
 			<div class="stack" id="stack">
 				<div class="stack-wrapper">
@@ -859,7 +1227,17 @@ color: inherit;
 
        <div class="swiper-slide two slide-03" data-scroll-container>
            <!-- content here slide 03 -->
+          <!-- <p class="txt-anim" style="position: absolute;right: 8%;top: 4%;" >swipe right</p> -->
+
+           
            <div class="slide-03-container" id="slide-03-container" data-scroll-section>
+            <div class="arrow-wrapper" style="position: absolute;right: 12%;top: 4%;display: flex;align-items: center;justify-content: center">
+           <i class="fas fa-chevron-left fa-2x" ></i>
+           <p  style="margin-left: 1vw;margin-top: 0.5vw;
+    letter-spacing: 2px;
+    font-size: 2vw;
+    color: #ffffff;" id="swipe-right-se-txt">Swipe right</p>
+           </div>
            	<div class="logo2" id="logo2" data-scroll>
            		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo2.png" alt="logo2" style="height: auto;" />
            	</div>
@@ -996,6 +1374,10 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
+
+
+
+
     const getSize = (width, heightPercentage) => {
     return `min(${width}vw, ${(window.innerHeight * heightPercentage) / 100}px)`;
     };
@@ -1094,12 +1476,13 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
         document.getElementById("trip").style.width = getSize(9,4.5);
         document.getElementById("trip").style.marginLeft = getSize(4,1.8);
 
-        document.getElementById("rw-btn").style.padding = getSize(4,1.8);
+       /* document.getElementById("rw-btn").style.padding = getSize(4,1.8);
         document.getElementById("rw-btn").style.borderRadius = getSize(6,3);
-        document.getElementById("rw-btn").style.fontSize = getSize(3,1.5);
+        document.getElementById("rw-btn").style.fontSize = getSize(3,1.5);*/
 
               
-        document.getElementById("stack").style.marginTop = getSize(18,9);
+        //document.getElementById("stack").style.marginTop = getSize(18,9);
+        document.getElementById("stack").style.marginTop = getSize(24,12);
         document.getElementById("slide-02-profile").style.width = getSize(40,20);
         document.getElementById("slide-02-profile").style.height = getSize(48,24);
 
@@ -1244,6 +1627,14 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
         document.getElementById("qr-img").style.width = getSize(30,20);
         document.getElementById("qr-img").style.height = getSize(30,20);
 
+        document.getElementById("swipe-right-se-txt").style.fontSize = getSize(2,1);
+        document.getElementById("swipe-right-se-txt").style.marginTop = getSize(0.5,0.2);
+        document.getElementById("swipe-right-se-txt").style.marginLeft = getSize(1,0.5);
+
+
+       document.getElementById("txt-anim").style.fontSize = getSize(2,1);
+       document.getElementById("txt-anim").style.marginTop = getSize(0.5,0.2);
+     
 
 
     }
