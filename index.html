@@ -15,6 +15,7 @@
 		margin:0;
 		padding: 0;
 		box-sizing: border-box;
+
 		
         font-family: 'Roboto', sans-serif;
 	}
@@ -67,8 +68,7 @@ color: inherit;
 	}
 	.logo
 	{
-		width: min(20vw,12vh);
-		height: min(20vw,12vh);
+		
 		overflow: hidden;
 	}
 	.headline
@@ -412,6 +412,7 @@ color: inherit;
     	line-height: 119.69%;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+
     }
     .gallery
     {
@@ -703,26 +704,26 @@ color: inherit;
 </style>
 
 </head>
-<body>
+<body onload="sizes()">
 
 
 	<div class="share-slide" id="share-slide" style="border: none;">
-        <img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()"  />
+        <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()"  />
         <div class="share-slide-share-icons">
             <h2 class="share-headline">SHARE MY CARD</h2>
             <div class="icon-grid">
-                <a href="#!" ><img src="sms.png" alt="sms-img" /></a>
-                <a href="#!"><img src="cs.png" alt="cs-img"/></a>
-                <a href="#!"><img src="whatsapp.png" alt="whatsapp-img" /></a>
-                <a href="#!"><img src="dropbox 187.png" alt="dropbox-img" /></a>
-                <a href="#!"><img src="fb9.png" alt="fb-img" /></a>
-                <a href="#!"><img src="telegram 191.png" alt="tel-img"  /></a>
-                <a href="#!"><img src="twitter8.png" alt="twit-img"  /></a>
-                <a href="#!"><img src="linkedin3.png" alt="linkedin-img"  /></a>
+                <a href="#!" ><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sms.png" alt="sms-img" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/cs.png" alt="cs-img"/></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/whatsapp.png" alt="whatsapp-img" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/dropbox 187.png" alt="dropbox-img" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb9.png" alt="fb-img" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/telegram 191.png" alt="tel-img"  /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/twitter8.png" alt="twit-img"  /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/linkedin3.png" alt="linkedin-img"  /></a>
             </div>
             <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
             <div class="qr-code-container" >
-                <img src="qr.png" alt="qr-img"/>
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/qr.png" alt="qr-img"/>
             </div>
         </div>
     </div>
@@ -741,45 +742,45 @@ color: inherit;
          
 			<div class="slide-01">
                <audio id="audio">
-            <source src="intro.mpeg" type="audio/mpeg" />
+            <source src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/intro.mpeg" type="audio/mpeg" />
           </audio>
-			<img src="Polygon001.png" alt="polygon-img" class="left-polygon" />
-			<img src="Polygon002.png" alt="polygon-img" class="right-polygon" />
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon001.png" alt="polygon-img" class="left-polygon" id="left-polygon" />
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon002.png" alt="polygon-img" class="right-polygon" id="right-polygon" />
 
-			<a href="#!" onclick="openSlide()"><img src="sharebtn.png" alt="sharebtn-img" class="share-btn" /></a>
+			<a href="#!" onclick="openSlide()"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sharebtn.png" alt="sharebtn-img" class="share-btn" id="share-btn" /></a>
 
 			
 
 			<a href="#!" onclick="translator()" class="translator" id="key">GRE</a>
 
 		 	<div class="slide-01-wrapper">
-			 <div class="logo">
-			 	<img src="logo.png"  alt="logo" class="logo-img" />
+			 <div class="logo" id="logo-tag">
+			 	<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png"  alt="logo" class="logo-img" />
 			 </div>
 			 <h1 class="headline" id="name">Georgios Parisis</h1>
 			 <p class="tag">ANASTAZIA LUXURY SUITES & SPA</p>
 
 			 <div class="social">
-			 	<a href="https://www.facebook.com/anastaziahotel/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb"/></a>
-			 	<a href="https://www.instagram.com/anastazia_luxury_suites_spa/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
+			 	<a href="https://www.facebook.com/anastaziahotel/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-top"/></a>
+			 	<a href="https://www.instagram.com/anastazia_luxury_suites_spa/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta" id="insta-top"/></a>
 			 </div>
 
-			 <div class="links-container" >
-			 	<a href="#!" class="contact-container">
-			 		<img src="phone-icon.png" alt="phone-icon" class="contact-icon" />
-			 		<p class="contact-txt">+30 6932214515</p>
+			 <div class="links-container" id="links-container">
+			 	<a href="#!" class="contact-container" id="contact-container1">
+			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/phone-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon1" />
+			 		<p class="contact-txt" id="contact-txt1">+30 6932214515</p>
 			 	</a>
-			 	<a href="#!" class="contact-container">
-			 		<img src="home-icon.png" alt="phone-icon" class="contact-icon" />
-			 		<p class="contact-txt">g.parisis@anastaziahotel.gr</p>
+			 	<a href="#!" class="contact-container" id="contact-container2">
+			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/home-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon2" />
+			 		<p class="contact-txt" id="contact-txt2">g.parisis@anastaziahotel.gr</p>
 			 	</a>
-			 	<a href="#!" class="contact-container">
-			 		<img src="location-icon.png" alt="phone-icon" class="contact-icon" />
-			 		<p class="contact-txt">Αργοναυτών Κομνηνών 12, 14572 Δροσιά Αττικής</p>
+			 	<a href="#!" class="contact-container" id="contact-container3">
+			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/location-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon3" />
+			 		<p class="contact-txt" id="contact-txt3">Αργοναυτών Κομνηνών 12, 14572 Δροσιά Αττικής</p>
 			 	</a>
-			 	<a href="#!" class="contact-container">
-			 		<img src="web-icon.png" alt="phone-icon" class="contact-icon" />
-			 		<p class="contact-txt">www.anastaziahotel.gr</p>
+			 	<a href="#!" class="contact-container" id="contact-container4">
+			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/web-icon.png" alt="phone-icon" class="contact-icon"  id="contact-icon4" />
+			 		<p class="contact-txt" id="contact-txt4">www.anastaziahotel.gr</p>
 			 	</a>
 			</div>
 
@@ -789,7 +790,7 @@ color: inherit;
                 loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;left:min(16vw,8vh);bottom: auto;
                   " ></lottie-player>
 			 	<a href="#" class="primary-btn">SAVE MY CONTACT</a>
-			 	 <img src="next.png"  alt="next" class="down-arrow bounce" />
+			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" />
 			</div> 	
 
 
@@ -802,13 +803,13 @@ color: inherit;
 
         <div class="slide-02">
           <div class="slide-02-img">
-				<img src="image02.png" alt="img" class="slide-02-img-img" />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/image02.png" alt="img" class="slide-02-img-img" />
 			</div>
 			<div class="image-spread"></div>
 
 			<div class="reviews">
-				<a href="#!"><img src="logo.png" alt="insta" class="logo" /></a>
-				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="Tripadvisor.png"   alt="Tripadvisor" class="review-icon" /></a>
+				<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png" alt="insta" class="logo" /></a>
+				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Tripadvisor.png"   alt="Tripadvisor" class="review-icon" /></a>
 			
 			 	       
 			</div>
@@ -823,7 +824,7 @@ color: inherit;
 					
                   <div class="imgandsocial">
 					<div class="slide-02-profile">
-					<img src="profile.png" alt="profile" />
+					<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/profile.png" alt="profile" />
 				    </div>
 				    <div class="social">
 				    	 <a href="https://www.instagram.com/georgiosparisis/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta"/></a>
@@ -860,17 +861,17 @@ color: inherit;
            <!-- content here slide 03 -->
            <div class="slide-03-container">
            	<div class="logo2">
-           		<img src="logo2.png" alt="logo2" style="height: auto;" />
+           		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo2.png" alt="logo2" style="height: auto;" />
            	</div>
            	<h1 class="slide-03-headline">The Crossing Between Business & Pleasure is Just a Breath Away</h1>
 
            	<div class="gallery">
            	<div class="galler-group-01"  style="margin-top: 18%">
            		<div class="img1" onclick="imageOneOpen()">
-           			<img src="slide02-img01.png" alt="gallery" class="imgs" />
+           			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img01.png" alt="gallery" class="imgs" />
            		</div>
            		<div class="img3" style="margin-top:8% " onclick="imageThreeOpen()">
-           			<img src="slide02-img04.png" alt="gallery" class="imgs"/>
+           			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img04.png" alt="gallery" class="imgs"/>
            			
            		</div>
            		
@@ -879,10 +880,10 @@ color: inherit;
 
            	<div class="galler-group-02" style="margin-top: 8%">
            		<div class="img2" onclick="imageTwoOpen()">
-           			<img src="slide02-img03.png" alt="gallery" class="imgs"/>
+           			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img03.png" alt="gallery" class="imgs"/>
            		</div>
            		<div class="img4" style="margin-top:8%;" onclick="imageFourOpen()">
-           			<img src="slide02-img02.png" alt="gallery"  class="imgs"/>
+           			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img02.png" alt="gallery"  class="imgs"/>
            		</div>
            	</div>
            </div>
@@ -912,7 +913,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
         
 		</div>
-		<img src="Vector.png" alt="vector" class="vector" style="height: auto;" />
+		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Vector.png" alt="vector" class="vector" style="height: auto;" />
 
 		</div>
 		
@@ -924,30 +925,30 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 <div class="fscreen-gallery" style="background: black;">
-			<img src="closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  />
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  />
 			<div class="image-01-fscreengallery">
-				<img src="slide02-img01.png" alt="img" class="image-01-fs" />
-				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(1)"  />
-                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(1)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img01.png" alt="img" class="image-01-fs" />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(1)"  />
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(1)"  />
 			</div>
 			<div class="image-02-fscreengallery">
-				<img src="slide02-img03.png" alt="img" class="image-02-fs"/>
-				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(2)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img03.png" alt="img" class="image-02-fs"/>
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(2)"  />
 
-			     <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(2)"  />
+			     <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(2)"  />
 				
 			</div>
 
 
 			<div class="image-03-fscreengallery">
-              <img src="slide02-img04.png" alt="img" class="image-03-fs"/>
-              <img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(3)"  />
-                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(3)"  />
+              <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img04.png" alt="img" class="image-03-fs"/>
+              <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(3)"  />
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(3)"  />
 			</div>
 			<div class="image-04-fscreengallery">
-				<img src="slide02-img02.png" alt="img" class="image-04-fs" />
-				<img src="arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(4)"  />
-                <img src="right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(4)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img02.png" alt="img" class="image-04-fs" />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(4)"  />
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(4)"  />
 			</div>
 
 			
@@ -957,6 +958,9 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
 
 
 <script type="text/javascript">
@@ -979,9 +983,76 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
+    const getSize = (width, heightPercentage) => {
+    return `min(${width}vw, ${(window.innerHeight * heightPercentage) / 100}px)`;
+    };
+
+    function sizes()
+    {
+        console.log(document.getElementById("logo-tag"));
+        document.getElementById("logo-tag").style.width = getSize(20,12);
+        document.getElementById("logo-tag").style.height = getSize(20,12);
+
+        document.getElementById("name").style.fontSize = getSize(7,3.5);
+        document.getElementById("name").style.marginTop = getSize(4,2);
+       
+        document.getElementById("tag").style.fontSize = getSize(3.6,1.7);
+        document.getElementById("tag").style.marginTop = getSize(2.3,1.8);
+
+        document.getElementById("fb-top").style.width = getSize(10,6);
+        document.getElementById("fb-top").style.height = getSize(10,6);
+
+        document.getElementById("insta-top").style.width = getSize(10,6);
+        document.getElementById("insta-top").style.height = getSize(10,6);
+
+        document.getElementById("links-container").style.marginTop = getSize(8,4);
+        document.getElementById("links-container").style.marginBottom = getSize(8,4);
+ 
+        document.getElementById("contact-container1").style.marginTop= getSize(7,3.5);
+        document.getElementById("contact-container2").style.marginTop= getSize(7,3.5);
+        document.getElementById("contact-container3").style.marginTop= getSize(7,3.5);
+        document.getElementById("contact-container4").style.marginTop= getSize(7,3.5);
+
+        document.getElementById("contact-icon1").style.width= getSize(10,4);
+        document.getElementById("contact-icon1").style.height= getSize(10,4);
+
+        document.getElementById("contact-icon2").style.width= getSize(10,4);
+        document.getElementById("contact-icon2").style.height= getSize(10,4);
+        document.getElementById("contact-icon3").style.width= getSize(10,4);
+        document.getElementById("contact-icon3").style.height= getSize(10,4);
+        document.getElementById("contact-icon4").style.width= getSize(10,4);
+        document.getElementById("contact-icon4").style.height= getSize(10,4);
+
+        document.getElementById("contact-txt1").style.marginLeft = getSize(5,3);
+        document.getElementById("contact-txt1").style.fontSize = getSize(3.5,2.5);
+
+        document.getElementById("contact-txt2").style.marginLeft = getSize(5,3);
+        document.getElementById("contact-txt2").style.fontSize = getSize(3.5,2.5);
+        document.getElementById("contact-txt3").style.marginLeft = getSize(5,3);
+        document.getElementById("contact-txt3").style.fontSize = getSize(3.5,2.5);
+        document.getElementById("contact-txt4").style.marginLeft = getSize(5,3);
+        document.getElementById("contact-txt4").style.fontSize = getSize(3.5,2.5);
+
+    }
+
+    
+
+    
+
+
+   const controller = new ScrollMagic.Controller();
+
+   const scene = new ScrollMagic.Scene({
+     triggerElement: '.slide-02-img',
+   })
+   .setClassToggle('.slide-02-img-img','zoomOut')
+   .addTo(controller);
+
+
+
+
     function swipenext(selector)
     {
-    	
 
     	 $(".swiper-wrapper").css('transform', 'translate3d(-980px, 0px, 0px)' );
          $(".swiper-wrapper").css('transition-duration', '0ms' );
@@ -989,7 +1060,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
          $(".one").addClass('swiper-slide-prev');
          $(".one").css('transform', 'translate3d(200px, 0px, -1500px) rotateX(0deg) rotateY(-100deg)' );
          $(".one").css('z-index', '0' );
-         $(".one").css('transition-duration', '900ms' );
+         $(".one").css('transition-duration', '1000ms' );
 
         
         
@@ -1026,56 +1097,67 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   	  setInterval(function () {
 
-  	  	if (swiper.activeIndex === 0) {
+  	/*if (swiper.activeIndex === 0) {
         $(".slide-02-img-img").addClass("zoomOut");
       } else {
         $(".slide-02-img-img").removeClass("zoomOut");
-      }
+      } */
 
 
       if (swiper.activeIndex === 1) {
         $(".imgs").addClass("zoomOut");
+        $(".slide-02-img-img").removeClass("zoomOut");
       } else {
         $(".imgs").removeClass("zoomOut");
+
       }
 
     }, 1000);
 
-  	function swipeNext()
-  	{
-  		$(".fscreen-gallery").fadeIn();
-  		$(".image-01-fscreengallery").fadeIn('fast');
-  		$(".image-01-fs").addClass('zoomOut');
-  	} 
+
+
+
+
+  	
+
 
   	function imageOneOpen()
   	{
   		$(".fscreen-gallery").css('z-index','1');
   		$(".fscreen-gallery").fadeIn();
+        $(".slide-03-headline").css('opacity','0');
+        $(".logo2").css('opacity','0');
+        
   		
-  		$(".image-01-fscreengallery").fadeIn();
+  		$(".image-01-fscreengallery").fadeIn('fast');
   		$(".image-01-fs").addClass('zoomOut');
 
   	} 
   	function imageTwoOpen()
   	{
+         $(".slide-03-headline").css('opacity','0');
+          $(".logo2").css('opacity','0');
   		$(".fscreen-gallery").css('z-index','1');
   		$(".fscreen-gallery").fadeIn();
-  		$(".image-02-fscreengallery").fadeIn();
+  		$(".image-02-fscreengallery").fadeIn('fast');
   		$(".image-02-fs").addClass('zoomOut');
   	} 
   	function imageThreeOpen()
   	{
+         $(".slide-03-headline").css('opacity','0');
+          $(".logo2").css('opacity','0')
   		$(".fscreen-gallery").css('z-index','1');
   		$(".fscreen-gallery").fadeIn();
-  		$(".image-03-fscreengallery").fadeIn();
+  		$(".image-03-fscreengallery").fadeIn('fast');
   		$(".image-03-fs").addClass('zoomOut');
   	} 
   	function imageFourOpen()
   	{
+         $(".slide-03-headline").css('opacity','0');
+          $(".logo2").css('opacity','0');
   		$(".fscreen-gallery").css('z-index','1');
   		$(".fscreen-gallery").fadeIn();
-  		$(".image-04-fscreengallery").fadeIn();
+  		$(".image-04-fscreengallery").fadeIn("fast");
   		$(".image-04-fs").addClass('zoomOut');
   	} 
 
@@ -1156,15 +1238,18 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
   	function closegallery()
   	{
-  		$(".fscreen-gallery").fadeOut('slow');
-  		$(".image-01-fscreengallery").fadeOut();
-  		$(".image-02-fscreengallery").fadeOut();
-  		$(".image-03-fscreengallery").fadeOut();
-  		$(".image-04-fscreengallery").fadeOut();
+        
+  		$(".fscreen-gallery").fadeOut(800,"linear");
+  		$(".image-01-fscreengallery").fadeOut(800,"linear");
+  		$(".image-02-fscreengallery").fadeOut(800,"linear");
+  		$(".image-03-fscreengallery").fadeOut(800,"linear");
+  		$(".image-04-fscreengallery").fadeOut(800,"linear");
   		$(".image-01-fs").removeClass('zoomOut');
   		$(".image-02-fs").removeClass('zoomOut');
   		$(".image-03-fs").removeClass('zoomOut');
   		$(".image-04-fs").removeClass('zoomOut');
+         $(".slide-03-headline").delay(5000).css('opacity','1')
+           $(".logo2").delay(5000).css('opacity','1');
   	} 
 
   	function openSlide() {
