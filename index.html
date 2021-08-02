@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bellefair&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css'>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+<link rel="stylesheet" type="text/css" href="locomotive-scroll.css">
 
 <style type="text/css">
     *
@@ -695,7 +696,7 @@ color: inherit;
 
     .swiper-wrapper,.two,.one,.swiper-slide-shadow-right
     {
-    	transition: all 5s ease-out;
+    	transition: 5s all ease-out;
 
     }
 
@@ -708,22 +709,22 @@ color: inherit;
 
 
 	<div class="share-slide" id="share-slide" style="border: none;">
-        <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()"  />
+        <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closeSlide()" id="close-icon-share"  />
         <div class="share-slide-share-icons">
-            <h2 class="share-headline">SHARE MY CARD</h2>
-            <div class="icon-grid">
-                <a href="#!" ><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sms.png" alt="sms-img" /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/cs.png" alt="cs-img"/></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/whatsapp.png" alt="whatsapp-img" /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/dropbox 187.png" alt="dropbox-img" /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb9.png" alt="fb-img" /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/telegram 191.png" alt="tel-img"  /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/twitter8.png" alt="twit-img"  /></a>
-                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/linkedin3.png" alt="linkedin-img"  /></a>
+            <h2 class="share-headline" id="share-headline">SHARE MY CARD</h2>
+            <div class="icon-grid" id="icon-grid">
+                <a href="#!" ><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sms.png" alt="sms-img" id="share-img1" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/cs.png" alt="cs-img" id="share-img2" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/whatsapp.png" alt="whatsapp-img" id="share-img3" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/dropbox 187.png" alt="dropbox-img" id="share-img4" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb9.png" alt="fb-img"  id="share-img5" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/telegram 191.png" alt="tel-img"  id="share-img6" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/twitter8.png" alt="twit-img"  id="share-img7" /></a>
+                <a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/linkedin3.png" alt="linkedin-img" id="share-img8" /></a>
             </div>
-            <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+            <h2 class="scan-and-save-txt" id="scan-save-txt">SCAN AND SAVE</h2>
             <div class="qr-code-container" >
-                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/qr.png" alt="qr-img"/>
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/qr.png" alt="qr-img" id="qr-img" />
             </div>
         </div>
     </div>
@@ -738,27 +739,27 @@ color: inherit;
 
 
 	<div class="swiper-wrapper">
-		<div class="swiper-slide one" style="border-radius: min(4vw,2vh);" >
+		<div class="swiper-slide one" style="border-radius: min(4vw,2vh);"  data-scroll-container>
          
-			<div class="slide-01">
+			<div class="slide-01" data-scroll-section>
                <audio id="audio">
             <source src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/intro.mpeg" type="audio/mpeg" />
           </audio>
-			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon001.png" alt="polygon-img" class="left-polygon" id="left-polygon" />
-			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon002.png" alt="polygon-img" class="right-polygon" id="right-polygon" />
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon001.png" alt="polygon-img" class="left-polygon" id="left-polygon" data-scroll/>
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Polygon002.png" alt="polygon-img" class="right-polygon" id="right-polygon" data-scroll/>
 
-			<a href="#!" onclick="openSlide()"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sharebtn.png" alt="sharebtn-img" class="share-btn" id="share-btn" /></a>
+			<a href="#!" onclick="openSlide()"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/sharebtn.png" alt="sharebtn-img" class="share-btn" id="share-btn" data-scroll/></a>
 
 			
 
-			<a href="#!" onclick="translator()" class="translator" id="key">GRE</a>
+			<a href="#!" onclick="translator()" class="translator" id="key" data-scroll>GRE</a>
 
-		 	<div class="slide-01-wrapper">
+		 	<div class="slide-01-wrapper" >
 			 <div class="logo" id="logo-tag">
 			 	<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png"  alt="logo" class="logo-img" />
 			 </div>
-			 <h1 class="headline" id="name">Georgios Parisis</h1>
-			 <p class="tag" id="tag">ANASTAZIA LUXURY SUITES & SPA</p>
+			 <h1 class="headline" id="name" data-scroll>Georgios Parisis</h1>
+			 <p class="tag" id="tag" data-scroll>ANASTAZIA LUXURY SUITES & SPA</p>
 
 			 <div class="social" id="social-top">
 			 	<a href="https://www.facebook.com/anastaziahotel/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-top"/></a>
@@ -766,31 +767,31 @@ color: inherit;
 			 </div>
 
 			 <div class="links-container" id="links-container">
-			 	<a href="#!" class="contact-container" id="contact-container1">
+			 	<a href="#!" class="contact-container" id="contact-container1" data-scroll>
 			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/phone-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon1" />
 			 		<p class="contact-txt" id="contact-txt1">+30 6932214515</p>
 			 	</a>
-			 	<a href="#!" class="contact-container" id="contact-container2">
+			 	<a href="#!" class="contact-container" id="contact-container2" data-scroll>
 			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/home-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon2" />
 			 		<p class="contact-txt" id="contact-txt2">g.parisis@anastaziahotel.gr</p>
 			 	</a>
-			 	<a href="#!" class="contact-container" id="contact-container3">
+			 	<a href="#!" class="contact-container" id="contact-container3" data-scroll>
 			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/location-icon.png" alt="phone-icon" class="contact-icon" id="contact-icon3" />
 			 		<p class="contact-txt" id="contact-txt3">Αργοναυτών Κομνηνών 12, 14572 Δροσιά Αττικής</p>
 			 	</a>
-			 	<a href="#!" class="contact-container" id="contact-container4">
+			 	<a href="#!" class="contact-container" id="contact-container4" data-scroll>
 			 		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/web-icon.png" alt="phone-icon" class="contact-icon"  id="contact-icon4" />
 			 		<p class="contact-txt" id="contact-txt4">www.anastaziahotel.gr</p>
 			 	</a>
 			</div>
 
-            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: flex-end;" id="save-container"> 
+            <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;align-items: flex-end;" id="save-container" data-scroll> 
             	<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
                 background="transparent"  speed="1"  class="lottie-anim" id="lottie" onclick="play2()"   
                 loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;bottom: auto;
                   " ></lottie-player>
-			 	<a href="#" class="primary-btn" id="primary-btn">SAVE MY CONTACT</a>
-			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" id="bounce-img" />
+			 	<a href="#" class="primary-btn" id="primary-btn" data-scroll>SAVE MY CONTACT</a>
+			 	 <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/next.png"  alt="next" class="down-arrow bounce" id="bounce-img" data-scroll/>
 			</div> 	
 
 
@@ -801,13 +802,13 @@ color: inherit;
           </div>
       </div>
 
-        <div class="slide-02">
-          <div class="slide-02-img" id="slide-02-img">
+        <div class="slide-02" >
+          <div class="slide-02-img" id="slide-02-img" data-scroll>
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/image02.png" alt="img" class="slide-02-img-img" />
 			</div>
-			<div class="image-spread" id="image-spread"></div>
+			<div class="image-spread" id="image-spread" data-scroll></div>
 
-			<div class="reviews">
+			<div class="reviews" data-scroll>
 				<a href="#!"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png" alt="insta" class="logo" id="logo-bottom" /></a>
 				<a href="https://www.tripadvisor.com.gr/Hotel_Review-g562637-d1784573-Reviews-Anastazia_Luxury_Suites_Rooms-Drossia_East_Attica_Region_Attica.html" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Tripadvisor.png"   alt="Tripadvisor" class="review-icon" id="trip" /></a>
 			
@@ -815,36 +816,36 @@ color: inherit;
 			</div>
 		
 			
-			<div class="review-btn-wrap">
+			<div class="review-btn-wrap" data-scroll>
 			<a href="#" class="next review-btn" id="rw-btn" onclick="swipenext()">view more</a>
             </div> 
 
 			<div class="stack" id="stack">
 				<div class="stack-wrapper">
 					
-                  <div class="imgandsocial">
-					<div class="slide-02-profile" id="slide-02-profile">
+                  <div class="imgandsocial" >
+					<div class="slide-02-profile" id="slide-02-profile" data-scroll>
 					<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/profile.png" alt="profile" />
 				    </div>
-				    <div class="social" id="social-bottom">
+				    <div class="social" id="social-bottom" data-scroll>
 				    	 <a href="https://www.instagram.com/georgiosparisis/" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta" id="insta-bottom" /></a>
 				    	<a href="https://www.facebook.com/G.EM.PARISIS" target="_blank"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-bottom"/></a>
 			 	       
 				    </div>
 				   </div>  
 
-				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);" id="eng-txt">
-					<h1 class="second-screen-h1 eng" id="second-screen-h1">Georgios Parisis</h1>
-					<a href="#!"><p class="adr-tag" id="tag-bottom">Lieutenant General e.a.Economist</p></a>
-					<a href="#!"><p class="slide02-phone-txt" id="number">+30 6945376731</p></a>
-					<a href="#!"><p class="slide02-adr-txt" id="email">g.em.parisis@gmail.com</p></a>
+				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);" id="eng-txt" >
+					<h1 class="second-screen-h1 eng" id="second-screen-h1" data-scroll>Georgios Parisis</h1>
+					<a href="#!"><p class="adr-tag" id="tag-bottom" data-scroll>Lieutenant General e.a.Economist</p></a>
+					<a href="#!"><p class="slide02-phone-txt" id="number" data-scroll>+30 6945376731</p></a>
+					<a href="#!"><p class="slide02-adr-txt" id="email" data-scroll>g.em.parisis@gmail.com</p></a>
 				    </div>
 
 				    <div class="gre-txt none" style="z-index: 2;position:absolute;" id="gre-txt">
-					<h1 class="second-screen-h1 gre" id="h1-gre" style="font-size:min(7vw,3vh)">ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
-					<a href="#!"><p class="adr-tag" id="tag-gre" style="margin-top:min(1.5vw,0.8vh)">ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p></a>
-					<a href="#!"><p class="slide02-phone-txt" id="phone-gre">+30 6945376731</p></a>
-					<a href="#!"><p class="slide02-adr-txt" id="email-gre">g.em.parisis@gmail.com</p></a>
+					<h1 class="second-screen-h1 gre" id="h1-gre" style="font-size:min(7vw,3vh)" data-scroll>ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
+					<a href="#!"><p class="adr-tag" id="tag-gre" style="margin-top:min(1.5vw,0.8vh)" data-scroll>ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p></a>
+					<a href="#!"><p class="slide02-phone-txt" id="phone-gre" data-scroll>+30 6945376731</p></a>
+					<a href="#!"><p class="slide02-adr-txt" id="email-gre" data-scroll>g.em.parisis@gmail.com</p></a>
 				    </div>
 
 
@@ -856,20 +857,20 @@ color: inherit;
 
 
 
-       <div class="swiper-slide two slide-03">
+       <div class="swiper-slide two slide-03" data-scroll-container>
            <!-- content here slide 03 -->
-           <div class="slide-03-container" id="slide-03-container">
-           	<div class="logo2" id="logo2">
+           <div class="slide-03-container" id="slide-03-container" data-scroll-section>
+           	<div class="logo2" id="logo2" data-scroll>
            		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo2.png" alt="logo2" style="height: auto;" />
            	</div>
-           	<h1 class="slide-03-headline" id="slide-03-headline">The Crossing Between Business & Pleasure is Just a Breath Away</h1>
+           	<h1 class="slide-03-headline" id="slide-03-headline" data-scroll>The Crossing Between Business & Pleasure is Just a Breath Away</h1>
 
-           	<div class="gallery">
+           	<div class="gallery" >
            	<div class="galler-group-01"  style="margin-top: 18%">
-           		<div class="img1" id="img1" onclick="imageOneOpen()">
+           		<div class="img1" id="img1" onclick="imageOneOpen()" data-scroll>
            			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img01.png" alt="gallery" class="imgs" />
            		</div>
-           		<div class="img3"  id="img3" style="margin-top:8% " onclick="imageThreeOpen()">
+           		<div class="img3"  id="img3" style="margin-top:8% " onclick="imageThreeOpen()" data-scroll>
            			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img04.png" alt="gallery" class="imgs"/>
            			
            		</div>
@@ -878,30 +879,30 @@ color: inherit;
 
 
            	<div class="galler-group-02" style="margin-top: 8%">
-           		<div class="img2" id="img2" onclick="imageTwoOpen()">
+           		<div class="img2" id="img2" onclick="imageTwoOpen()" data-scroll>
            			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img03.png" alt="gallery" class="imgs"/>
            		</div>
-           		<div class="img4"  id="img4" style="margin-top:8%;" onclick="imageFourOpen()">
+           		<div class="img4"  id="img4" style="margin-top:8%;" onclick="imageFourOpen()" data-scroll>
            			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img02.png" alt="gallery"  class="imgs"/>
            		</div>
            	</div>
            </div>
 
-           <div class="bookwrapper" id="bookwrapper">
+           <div class="bookwrapper" id="bookwrapper" data-scroll>
            <a href="https://anastazialuxurysuites.reserve-online.net/"  target="_blank" class="bookspotbtn" id="bookspotbtn">BOOK YOUR SPOT</a>
            </div>
 
 
-           <p class="para" id="para">Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
+           <p class="para" id="para" data-scroll >Welcome to Anastazia Luxury Suites & Spa a modern and recently renovated Hotel in the North cosmopolitan suburbs of Athens, in Drosia (borderline Drosia – Ekali). 
 
 For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is the ideal abode for both those who visit Athens due to their professional obligations and for those who want to holiday near Athens and combine direct contact with the cultural, historical, religious and entertaining attractions but also have a sense of recreation away from the bustle of the capital's center.</p>
 
-<p class="para-gre none" id="para-gre">Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.
+<p class="para-gre none" id="para-gre" data-scroll>Καλώς Ορίσατε στο Anastazia Luxury Suites & Spa, έναν ιδανικό τόπο διαμονής για όσους επισκέπτονται την Αθήνα στα πλαίσια των επαγγελματικών τους υποχρεώσεων ή όσους θέλουν να κάνουν διακοπές κοντά στην Αθήνα και να συνδυάσουν την άμεση επαφή με τα πολιτιστικά, ιστορικά, θρησκευτικά και ψυχαγωγικά τους αξιοθέατα αλλά ταυτόχρονα να έχουν την αίσθηση της αναψυχής μακριά από την κίνηση του κέντρου της πρωτεύουσας.
 
 Προσφέρει σε κάθε πελάτη υπηρεσίες υψηλού επιπέδου σε πολύ προσιτές τιμές.</p>
  
-        <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;margin-top: min(6vw,3vh)">
-            <div class="social" id="social-third">
+        <div style="width: 100%;display: flex;flex-shrink: 0;justify-content: center;margin-top: min(6vw,3vh)" data-scroll>
+            <div class="social" id="social-third" >
 			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/fb.png" alt="fb" id="fb-third" /></a>
 			 	<a href="#"><img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/insta.png" alt="insta" id="insta-third" /></a>
 			 </div>
@@ -912,42 +913,43 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
         
 		</div>
-		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Vector.png" alt="vector" class="vector" id="vector" style="height: auto;" />
+		<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/Vector.png" alt="vector" class="vector" id="vector" style="height: auto;"  />
 
 		</div>
 		
 		
 	</div>
+    
 	
 </div>
 
 
 
 <div class="fscreen-gallery" style="background: black;">
-			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  />
+			<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/closeicon.png" alt="close-icon"  class="close-icon" onclick="closegallery()"  id="close-gallery" />
 			<div class="image-01-fscreengallery">
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img01.png" alt="img" class="image-01-fs" />
-				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(1)"  />
-                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(1)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(1)"  id="arrow1" />
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(1)"  id="arrow2" />
 			</div>
 			<div class="image-02-fscreengallery">
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img03.png" alt="img" class="image-02-fs"/>
-				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(2)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(2)"  id="arrow3"/>
 
-			     <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(2)"  />
+			     <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(2)" id="arrow4" />
 				
 			</div>
 
 
 			<div class="image-03-fscreengallery">
               <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img04.png" alt="img" class="image-03-fs"/>
-              <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(3)"  />
-                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(3)"  />
+              <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(3)"  id="arrow5"/>
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(3)" id="arrow6"  />
 			</div>
 			<div class="image-04-fscreengallery">
 				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/slide02-img02.png" alt="img" class="image-04-fs" />
-				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(4)"  />
-                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(4)"  />
+				<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/arrow.png" alt="close-icon"  class="close-icon" style="top:50%;left:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrowprev(4)" id="arrow7" />
+                <img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/right-arrow.png" alt="close-icon"  class="close-icon" style="top:50%;right:6%;width: min(9vw,4vh);height: min(9vw,4vh)" onclick="arrownext(4)" id="arrow8" />
 			</div>
 
 			
@@ -960,6 +962,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
+<script type="text/javascript" src="locomotive-scroll.js"></script>
 
 
 <script type="text/javascript">
@@ -977,8 +980,19 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 		    modifier: 1,
 		    slideShadows : true
 		  },
-		  navigation: { nextEl: '.next', prevEl: '.prev' }
+		  navigation: { nextEl: '.swiper-button-next', prevEl: '.prev' }
+
+
   	});
+ 
+
+    const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
+
+
+
 
 
 
@@ -1163,8 +1177,75 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
         document.getElementById("insta-third").style.height = getSize(10,5);
 
         document.getElementById("vector").style.height = getHeight(50);
+        document.getElementById("close-gallery").style.width = getSize(5,3);
+        document.getElementById("close-gallery").style.height = getSize(5,3);
 
-         
+        document.getElementById("arrow1").style.width = getSize(9,4);
+        document.getElementById("arrow1").style.height = getSize(9,4);
+
+        document.getElementById("arrow2").style.width = getSize(9,4);
+        document.getElementById("arrow2").style.height = getSize(9,4);
+
+        document.getElementById("arrow3").style.width = getSize(9,4);
+        document.getElementById("arrow3").style.height = getSize(9,4);
+
+        document.getElementById("arrow4").style.width = getSize(9,4);
+        document.getElementById("arrow4").style.height = getSize(9,4);
+
+        document.getElementById("arrow5").style.width = getSize(9,4);
+        document.getElementById("arrow5").style.height = getSize(9,4);
+
+        document.getElementById("arrow6").style.width = getSize(9,4);
+        document.getElementById("arrow6").style.height = getSize(9,4);
+
+        document.getElementById("arrow7").style.width = getSize(9,4);
+        document.getElementById("arrow7").style.height = getSize(9,4);
+
+        document.getElementById("arrow8").style.width = getSize(9,4);
+        document.getElementById("arrow8").style.height = getSize(9,4);
+
+        document.getElementById("share-slide").style.height = getHeight(100);
+
+
+
+        document.getElementById("close-icon-share").style.height = getSize(5,3);
+        document.getElementById("close-icon-share").style.width = getSize(5,3);
+
+        document.getElementById("share-headline").style.height = getSize(5,2.5);
+
+        document.getElementById("icon-grid").style.gridGap = getSize(2,1);
+
+        document.getElementById("share-img1").style.width = getSize(11,5);
+        document.getElementById("share-img1").style.height = getSize(11,5);
+
+        document.getElementById("share-img2").style.width = getSize(11,5);
+        document.getElementById("share-img2").style.height = getSize(11,5);
+
+        document.getElementById("share-img3").style.width = getSize(11,5);
+        document.getElementById("share-img3").style.height = getSize(11,5);
+
+        document.getElementById("share-img4").style.width = getSize(11,5);
+        document.getElementById("share-img4").style.height = getSize(11,5);
+
+        document.getElementById("share-img5").style.width = getSize(11,5);
+        document.getElementById("share-img5").style.height = getSize(11,5);
+
+        document.getElementById("share-img6").style.width = getSize(11,5);
+        document.getElementById("share-img6").style.height = getSize(11,5);
+
+        document.getElementById("share-img7").style.width = getSize(11,5);
+        document.getElementById("share-img7").style.height = getSize(11,5);
+
+        document.getElementById("share-img8").style.width = getSize(11,5);
+        document.getElementById("share-img8").style.height = getSize(11,5);
+
+        document.getElementById("scan-save-txt").style.fontSize = getSize(5,2.5);
+
+        document.getElementById("qr-img").style.width = getSize(30,20);
+        document.getElementById("qr-img").style.height = getSize(30,20);
+
+
+
     }
 
     
@@ -1189,16 +1270,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
     	 $(".swiper-wrapper").css('transform', 'translate3d(-980px, 0px, 0px)' );
          $(".swiper-wrapper").css('transition-duration', '0ms' );
 
-         $(".one").addClass('swiper-slide-prev');
-         $(".one").css('transform', 'translate3d(200px, 0px, -1500px) rotateX(0deg) rotateY(-100deg)' );
-         $(".one").css('z-index', '0' );
-         $(".one").css('transition-duration', '1000ms' );
-
         
-        
-  
-
-
          $(".two").removeClass('swiper-slide-next');
          $(".two").addClass('swiper-slide-active');
          $(".two").css('transform','translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)' );
@@ -1206,6 +1278,14 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
          $(".two").css('transition-duration', '900ms' );
          $(".swiper-slide-shadow-right").css('opacity','0');
          $(".swiper-slide-shadow-right").css('transition-duration','0ms');
+
+
+
+        $(".one").removeClass('swiper-slide-active');
+        $(".one").addClass('swiper-slide-prev');
+        $(".one").css('transform', 'translate3d(200px, 0px, -1500px) rotateX(0deg) rotateY(-100deg)' );
+         $(".one").css('z-index', '0' );
+         $(".one").css('transition-duration', '900ms' );
 
 
     
