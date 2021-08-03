@@ -1234,7 +1234,7 @@ color: inherit;
 	<div class="swiper-wrapper">
 		<div class="swiper-slide one" style="border-radius: min(4vw,2vh);"  >
          
-			<div class="slide-01" >
+			<div class="slide-01" id="slide-01">
                <audio id="audio">
             <source src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/intro.mpeg" type="audio/mpeg" />
           </audio>
@@ -1247,7 +1247,7 @@ color: inherit;
 
 			<a href="#!" onclick="translator()" class="translator" id="key">GRE</a>
 
-		 	<div class="slide-01-wrapper trans" >
+		 	<div class="slide-01-wrapper trans" id="wrapper-slide-01">
 			 <div class="logo" id="logo-tag">
 			 	<img src="https://raw.githubusercontent.com/rohit-virkud/parisis/main/logo.png"  alt="logo" class="logo-img" />
 			 </div>
@@ -1353,7 +1353,7 @@ color: inherit;
 
 
 
-       <div class="swiper-slide two slide-03" >
+       <div class="swiper-slide two slide-03" id="slide-03" >
            <!-- content here slide 03 -->
           <!-- <p class="txt-anim" style="position: absolute;right: 8%;top: 4%;" >swipe right</p> -->
 
@@ -1777,8 +1777,12 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
        document.getElementById("txt-anim").style.marginTop = getSize(0.5,0.2);
 
        document.getElementById("swiper-container").style.height = getHeight(100);
+       document.getElementById("slide-01").style.height = getHeight(100);
+       document.getElementById("slide-01").style.height = getHeight(100);
+       document.getElementById("slide-02x").style.height = getHeight(100);
+       document.getElementById("wrapper-slide-01").style.minHeight = getHeight(95);
 
-     
+       
 
     }
 
