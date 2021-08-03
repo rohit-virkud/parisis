@@ -228,6 +228,7 @@ color: inherit;
     {
 
     display: flex;
+    flex-shrink: 0;
    justify-content: center; 
     align-items: center;
     width: 100%;
@@ -237,6 +238,7 @@ color: inherit;
     .stack-wrapper
     {
     	display: flex;
+      flex-shrink:0;
     /* justify-content: center; */
     
     width: 80%;
@@ -423,6 +425,7 @@ color: inherit;
     .gallery
     {
     	display: flex;
+        flex-shrink: 0;
     }
     .galler-group-01,.galler-group-02
     {
@@ -679,6 +682,7 @@ color: inherit;
            
 
     }
+
     .image-01-fscreengallery,.image-02-fscreengallery,
     .image-03-fscreengallery,
     .image-04-fscreengallery
@@ -1349,7 +1353,8 @@ color: inherit;
 
            
            <div class="slide-03-container" id="slide-03-container"  >
-            <div class="arrow-wrapper" style="position: absolute;right: 12%;top: 4%;display: flex;align-items: center;justify-content: center">
+            <div class="arrow-wrapper" style="position: absolute;right: 12%;top: 4%;display: flex;align-items: center;justify-content: center;flex-shrink:
+            0;">
            <i class="fas fa-chevron-left fa-2x" ></i>
            <p  style="margin-left: 1vw;margin-top: 0.5vw;
     letter-spacing: 2px;
@@ -1452,6 +1457,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 			
 </div> 
 <!-- partial -->
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
@@ -1921,10 +1927,11 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
   	{
   		 if(e===1)
            {
+
+
+            $(".image-01-fscreengallery").fadeOut(800,"linear");
             $(".image-04-fscreengallery").fadeIn(800,"linear");
 
-           	$(".image-01-fscreengallery").fadeOut(800,"linear");
-  		    
   		    $(".image-01-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
   		 
@@ -1932,8 +1939,10 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
            if(e===2)
            {
+
+            $(".image-02-fscreengallery").fadeOut(800,"linear");
             $(".image-01-fscreengallery").fadeIn(800,"linear")
-  		    $(".image-02-fscreengallery").fadeOut(800,"linear");
+  		   
   		    
   		    $(".image-02-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
@@ -1941,8 +1950,9 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            if(e===3)
            {
 
+            $(".image-03-fscreengallery").fadeOut(800,"linear");
             $(".image-02-fscreengallery").fadeIn(800,"linear")
-  		    $(".image-03-fscreengallery").fadeOut(800,"linear");
+  		    
   		    
   		    $(".image-03-fs").removeClass('zoomOut');
   		    $(".image-02-fs").addClass('zoomOut');
@@ -1950,8 +1960,9 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            if(e===4)
            {
 
+            $(".image-04-fscreengallery").fadeOut(800,"linear");
             $(".image-03-fscreengallery").fadeIn(800,"linear")
-  		    $(".image-04-fscreengallery").fadeOut(800,"linear");
+  		   
   		   
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-03-fs").addClass('zoomOut');
