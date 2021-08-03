@@ -34,7 +34,7 @@ color: inherit;
 .swiper-container
 	{
 		width: 100%;
-		height: 100vh;
+		
 		position: absolute;
 		left: 50%;
 		margin-left: -50%;
@@ -1095,7 +1095,7 @@ color: inherit;
 
 
 <!-- Swiper -->
-<div class="row swiper-container">
+<div class="row swiper-container" id="swiper-container">
 
 
 
@@ -1633,8 +1633,9 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
        document.getElementById("txt-anim").style.fontSize = getSize(2,1);
        document.getElementById("txt-anim").style.marginTop = getSize(0.5,0.2);
-     
 
+       document.getElementById("swiper-container").style.height = getHeight(100);
+     
 
     }
 
