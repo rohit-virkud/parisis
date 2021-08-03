@@ -1323,15 +1323,15 @@ color: inherit;
 				    <div class="eng-txt" style="z-index: 2;position:absolute;margin-left:  min(30vw,15vh);" id="eng-txt" >
 					<h1 class="second-screen-h1 eng" id="second-screen-h1">Georgios Parisis</h1>
 					<a href="#!"><p class="adr-tag" id="tag-bottom">Lieutenant General e.a.Economist</p></a>
-					<a href="#!"><p class="slide02-phone-txt" id="number">+30 6945376731</p></a>
-					<a href="#!"><p class="slide02-adr-txt" id="email">g.em.parisis@gmail.com</p></a>
+					<a href="tel:+30 6945376731"><p class="slide02-phone-txt" id="number">+30 6945376731</p></a>
+					<a href="mailto:g.em.parisis@gmail.com"><p class="slide02-adr-txt" id="email">g.em.parisis@gmail.com</p></a>
 				    </div>
 
 				    <div class="gre-txt none" style="z-index: 2;position:absolute;" id="gre-txt">
 					<h1 class="second-screen-h1 gre" id="h1-gre" style="font-size:min(7vw,3vh)" >ΓΕΩΡΓΙΟΣ ΠΑΡΙΣΗΣ</h1>
 					<a href="#!"><p class="adr-tag" id="tag-gre" style="margin-top:min(1.5vw,0.8vh)">ΥΠΟΠΤΕΡΑΡΧΟΣ Ε.Α. ΟΙΚΟΝΟΜΟΛΟΓΟΣ</p></a>
-					<a href="#!"><p class="slide02-phone-txt" id="phone-gre">+30 6945376731</p></a>
-					<a href="#!"><p class="slide02-adr-txt" id="email-gre">g.em.parisis@gmail.com</p></a>
+					<a href="tel:+30 6945376731"><p class="slide02-phone-txt" id="phone-gre">+30 6945376731</p></a>
+					<a href="mailto:g.em.parisis@gmail.com"><p class="slide02-adr-txt" id="email-gre">g.em.parisis@gmail.com</p></a>
 				    </div>
 
 
@@ -1782,35 +1782,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
-    function swipenext(selector)
-    {
-
-    	 $(".swiper-wrapper").css('transform', 'translate3d(-980px, 0px, 0px)' );
-         $(".swiper-wrapper").css('transition-duration', '0ms' );
-
-        
-         $(".two").removeClass('swiper-slide-next');
-         $(".two").addClass('swiper-slide-active');
-         $(".two").css('transform','translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)' );
-         $(".two").css('z-index', '1' );
-         $(".two").css('transition-duration', '900ms' );
-         $(".swiper-slide-shadow-right").css('opacity','0');
-         $(".swiper-slide-shadow-right").css('transition-duration','0ms');
-
-
-
-        $(".one").removeClass('swiper-slide-active');
-        $(".one").addClass('swiper-slide-prev');
-        $(".one").css('transform', 'translate3d(200px, 0px, -1500px) rotateX(0deg) rotateY(-100deg)' );
-         $(".one").css('z-index', '0' );
-         $(".one").css('transition-duration', '900ms' );
-
-
-    
-  
-  
-         
-    }
+   
  
   
 
@@ -1934,8 +1906,10 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            }
            if(e===4)
            {
+
+            $(".image-04-fscreengallery").fadeOut(800,"linear")
            	$(".image-01-fscreengallery").fadeIn(800,"linear");
-           	$(".image-04-fscreengallery").fadeOut(800,"linear")
+           
            
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
