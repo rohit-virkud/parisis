@@ -1506,12 +1506,16 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
 
 
-
-
-
     const getSize = (width, heightPercentage) => {
-    return `min(${width}vw, ${(window.innerHeight * heightPercentage) / 100}px)`;
-    };
+    return `${Math.min(
+      (width * window.innerWidth) / 100,
+      (window.innerHeight * heightPercentage) / 100
+    )}px`;
+  };
+
+
+
+    
 
     
     const getHeight = (heightPercentage) => {
