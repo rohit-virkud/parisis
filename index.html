@@ -698,7 +698,7 @@ color: inherit;
     .image-01-fs,.image-02-fs,.image-03-fs,.image-04-fs
     {
       transform: scale(1.2);
-      transition: 5s  all ease-out;
+      transition: 5s  transform ease-out;
 
     }
     .zoomOut
@@ -1891,7 +1891,8 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            {
 
            	$(".image-02-fscreengallery").fadeIn(800,"linear");
-           	$(".image-01-fscreengallery").fadeOut(800,"linear")
+           	$(".image-01-fscreengallery").fadeOut(800,"linear");
+
   		    $(".image-01-fs").removeClass('zoomOut');
   		    $(".image-02-fs").addClass('zoomOut');
            }
@@ -1899,7 +1900,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            {
            	$(".image-03-fscreengallery").fadeIn(800,"linear");
            	$(".image-02-fscreengallery").fadeOut(800,"linear")
-           
+    
   		    $(".image-02-fs").removeClass('zoomOut');
   		    $(".image-03-fs").addClass('zoomOut');
            }
@@ -1907,7 +1908,7 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            {
            	$(".image-04-fscreengallery").fadeIn(800,"linear");
            	$(".image-03-fscreengallery").fadeOut(800,"linear")
-           	
+           
   		    $(".image-03-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
            }
@@ -1916,7 +1917,6 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
             $(".image-04-fscreengallery").fadeOut(800,"linear")
            	$(".image-01-fscreengallery").fadeIn(800,"linear");
-           
            
   		    $(".image-04-fs").removeClass('zoomOut');
   		    $(".image-01-fs").addClass('zoomOut');
@@ -1930,9 +1930,10 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
            {
 
 
+             $(".image-04-fscreengallery").fadeIn(800,"linear");
             $(".image-01-fscreengallery").fadeOut(800,"linear");
-            $(".image-04-fscreengallery").fadeIn(800,"linear");
-
+           
+            
   		    $(".image-01-fs").removeClass('zoomOut');
   		    $(".image-04-fs").addClass('zoomOut');
   		 
