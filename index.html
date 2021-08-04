@@ -416,7 +416,7 @@ body{ scroll-behavior: smooth  }
     }
     .slide-03-headline
     {
-    	width: 100%;
+    	width: 95%;
     	font-family: 'Anton', sans-serif;
     	margin-top: min(8vw,4vh);
     	color: #DDB583;
@@ -1786,14 +1786,14 @@ For whatever reason you may be traveling, the Anastazia Luxury Suites & Rooms is
 
     
 
-
+   document.querySelector('slide-01-wrapper').scrollIntoView({behavior: 'smooth'});
    const controller = new ScrollMagic.Controller();
 
-  /* const scene = new ScrollMagic.Scene({
+   const scene = new ScrollMagic.Scene({
      triggerElement: '.slide-02-img',
    })
    .setClassToggle('.slide-02-img-img','zoomOut')
-   .addTo(controller);*/
+   .addTo(controller);
 
 
 
